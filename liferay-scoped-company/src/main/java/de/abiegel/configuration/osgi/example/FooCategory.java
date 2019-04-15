@@ -18,4 +18,14 @@ public class FooCategory implements ConfigurationCategory {
 		return "my-foo-title";
 	}
 
+	/**
+	 * choose one of
+	 * @see https://clayui.com/docs/components/icons.html 
+	 */
+	@Override
+	public String getCategoryIcon() {
+
+		return "third-party";
+	}
+
 }
