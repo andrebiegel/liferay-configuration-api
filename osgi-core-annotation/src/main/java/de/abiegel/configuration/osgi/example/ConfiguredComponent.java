@@ -12,7 +12,6 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
  * @author usiabiegel
  */
 @Designate(ocd = ConfiguredComponentConfig.class)
-
 @Component(configurationPid = {
 		"de.abiegel.configuration.osgi.example.ConfiguredComponentConfig" }, immediate = true, service = Fooable.class)
 public class ConfiguredComponent implements Fooable {
