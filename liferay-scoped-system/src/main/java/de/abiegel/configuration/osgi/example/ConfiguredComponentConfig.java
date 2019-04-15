@@ -1,7 +1,5 @@
 package de.abiegel.configuration.osgi.example;
 
-import org.osgi.service.metatype.annotations.ObjectClassDefinition;
-
 import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition;
 import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition.Scope;
 

@@ -4,7 +4,6 @@ import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Modified;
 import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.metatype.annotations.Designate;
 
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
@@ -14,7 +13,6 @@ import com.liferay.portal.kernel.module.configuration.ConfigurationProvider;
 /**
  * @author usiabiegel
  */
-@Designate(ocd = ConfiguredComponentConfig.class)
 @Component(configurationPid = {
 		"de.abiegel.configuration.osgi.example.ConfiguredComponentConfig" }, immediate = true, service = Fooable.class)
 public class ConfiguredComponent implements Fooable {
