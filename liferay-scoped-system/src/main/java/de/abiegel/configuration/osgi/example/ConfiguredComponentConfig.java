@@ -8,10 +8,9 @@ import aQute.bnd.annotation.metatype.Meta.OCD;
 
 
 @ExtendedObjectClassDefinition(scope = Scope.SYSTEM, category = "my-foo")
-@OCD( id = "de.abiegel.configuration.osgi.example.ConfiguredComponentConfig", localization = "content/Language", name = "foo-default-name")
-//@ObjectClassDefinition(name = "foo-default-name",localization = "content/Language" )
+@OCD( id = "de.abiegel.configuration.osgi.example.ConfiguredComponentConfig", localization = "content/Language", name = "foo-default-name", description= "foo-default-name-desc")
 public @interface ConfiguredComponentConfig {
 
-	@AD(required = false, name = "foo-default-name-entry", deflt = "FOO")
+	@AD(required = false, name = "foo-default-name-entry", deflt = "FOO", description= "foo-default-name-entry-desc")
 	String defaultName() default "Foo";
 }
