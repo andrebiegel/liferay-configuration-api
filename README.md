@@ -33,8 +33,10 @@ The following scopes are available.
 
 * System (default)
 * company
-* Group  aka Site 
+* Group aka Site 
 * Portlet Instance
+
+It is important to enable metatypes in your bnd file. Otherwise bnd wont recognize the bnd annotations used in liferay.
 
 ## Sources
 
