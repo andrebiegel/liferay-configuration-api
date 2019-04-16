@@ -4,6 +4,7 @@ This repository explores the functionality liferay dxp provides with the new con
 In this repository are four examples located:
 * Pure OSGI Example
 * system scoped configuration with osgi service
+* company scoped configuration with osgi service
 * group scoped configuration with osgi service
 * portlet instance scoped configuration with a Liferay MVC Portlet in combination with a Configuration JSP action
 
@@ -31,6 +32,7 @@ A configuration category can have a custom icon. Available Icons are provided by
 The following scopes are available.
 
 * System (default)
+* company
 * Group  aka Site 
 * Portlet Instance
 
