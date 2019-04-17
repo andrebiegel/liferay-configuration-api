@@ -38,12 +38,12 @@ import com.liferay.portal.kernel.util.WebKeys;
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
 		"com.liferay.portlet.instanceable=true",
-		"javax.portlet.display-name=Hello World",
-		"javax.portlet.init-param.template-path=/",
-		"javax.portlet.name=de.abiegel.configuration.osgi.liferay.scoped.portlet" ,
+		"javax.portlet.display-name=Portlet Configuration Example",
+		"javax.portlet.init-param.template-path=/osgiconfiguredportlet/",
 		"javax.portlet.supports.mime-type=text/html",
 		"javax.portlet.resource-bundle=content.Language",
 		"javax.portlet.security-role-ref=power-user,user",
+		"javax.portlet.init-param.config-template=/osgiconfiguredportlet/configuration.jsp",
 		"javax.portlet.init-param.view-template=/osgiconfiguredportlet/view.jsp"
 	},
 	service = Portlet.class

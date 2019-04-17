@@ -22,9 +22,21 @@
 taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %><%@
 taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %><%@
 taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
-
-<%@ page import=" de.abiegel.configuration.osgi.example.ConfiguredComponentConfig" %>
-<%@ page import="com.liferay.portal.kernel.util.GetterUtil" %>
+<%@taglib uri="http://liferay.com/tld/frontend" prefix="liferay-frontend" %>
+<%@page import="com.liferay.portal.kernel.module.configuration.ConfigurationProviderUtil" %>
+<%@page import="com.liferay.portal.kernel.settings.ParameterMapSettingsLocator" %>
+<%@page import="com.liferay.portal.kernel.settings.PortletInstanceSettingsLocator" %>
+<%@page import="de.abiegel.configuration.osgi.example.ConfiguredComponentConfig" %>
+<%@page import="com.liferay.portal.kernel.util.GetterUtil" %>
 <portlet:defineObjects />
 
 <liferay-theme:defineObjects />
+
+<%
+ConfiguredComponentConfig configuration = ConfigurationProviderUtil.getConfiguration(ConfiguredComponentConfig.class, new ParameterMapSettingsLocator(request.getParameterMap(), new PortletInstanceSettingsLocator(themeDisplay.getLayout(), portletDisplay.getPortletResource())));
+
+ConfiguredComponentConfig instanceConfiguration =
+portletDisplay.getPortletInstanceConfiguration(
+		ConfiguredComponentConfig.class);
+%>
+

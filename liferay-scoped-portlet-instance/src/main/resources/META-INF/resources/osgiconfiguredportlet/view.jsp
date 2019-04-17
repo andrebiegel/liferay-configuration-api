@@ -20,11 +20,6 @@
 	<b><liferay-ui:message key="blade_portlet_jsp_JSPPortlet.caption" /></b>
 </p>
 
-<%
-ConfiguredComponentConfig configuration = (ConfiguredComponentConfig) GetterUtil.getObject(
-    renderRequest.getAttribute(ConfiguredComponentConfig.class.getName()));
 
-String configName = configuration.defaultName();
-%>
-
-<p>Config Name : <%= configName %></p>
+<p>Config by ConfigurationProviderUtil: Configured Entry Name : <%= configuration.defaultName() %></p>
+<p>Config by portletDisplay: Configured Entry Name : <%= instanceConfiguration.defaultName() %></p>
