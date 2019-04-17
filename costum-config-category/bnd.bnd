@@ -1,0 +1,5 @@
+Bundle-Name: de.abiegel.configuration.category.foo
+Bundle-SymbolicName: de.abiegel.configuration.category.foo
+-plugin.resourcebundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
+Provide-Capability:\
+liferay.resource.bundle;resource.bundle.aggregate:String="(bundle.symbolic.name=de.abiegel.configuration.category.foo),(bundle.symbolic.name=com.liferay.configuration.admin.web)";bundle.symbolic.name=com.liferay.configuration.admin.web;resource.bundle.base.name="content.Language";service.ranking:Long="2";\
