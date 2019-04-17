@@ -28,4 +28,11 @@ public class FooCategory implements ConfigurationCategory {
 		return "third-party";
 	}
 
+	/**
+	 * What is that for ?? 
+	 */
+	@Override
+	public String getBundleSymbolicName() {
+		return "de.abiegel.configuration.osgi.example";
+	}
 }
