@@ -22,7 +22,7 @@
 		<liferay-frontend:fieldset-group>
 			<liferay-frontend:fieldset collapsible="<%=false%>"
 				label="general-settings">
-				<aui:input name="preferences--foo-default-name-entry--" type="text"
+				<aui:input name="preferences--defaultName--" type="text" label="foo-default-name-entry"
 					value="<%=configuration.defaultName()%>" />
 
 			</liferay-frontend:fieldset>
