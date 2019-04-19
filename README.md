@@ -43,7 +43,7 @@ It is important to enable metatypes in your bnd file. Otherwise bnd wont recogni
 * Language Property Issue: with the the group-scoped example the category section labels fails, but the category labels is resolved. When deploying the company scoped version even the category label fails. When exluding the the configuration category and deploying it separately, it is like the group scoped example .. Strange Things  , the topic is  also in the forums https://community.liferay.com/de/forums/-/message_boards/message/113234099
 * Exporting configurations: when exportings configurations , liferay is providing the mediatype as XML and not as config. ..the old way was in xml
 
-##Open Topics
+## Open Topics
 *  the portlet examples contains a ConfigurationPidMapping Implementation. it is unclear what it acually does .. it has been adapted from the liferay blogs portlet
 
 [1]: https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/categorizing-the-configuration  "Creating Configuration Categories"
