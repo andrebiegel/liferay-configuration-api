@@ -1,5 +1,5 @@
 # Configuration API in Liferay DXP
-This repository explores the functionality liferay dxp provides with the new configuration api. It builds upon the osgi configuration admin. furthermore it allows a configuration scoping and the integration within the system settings ui with configuration categories.
+This repository explores the functionality liferay dxp provides with the new configuration api. It builds upon the osgi configuration admin. Furthermore it allows scoping of configuration and the integration within the system settings ui with configuration categories.
 
 In this repository are four examples located:
 * [Pure OSGI Example](/osgi-core-annotation/README.md)
@@ -27,7 +27,7 @@ Every liferay configuration category is defined within the *com.liferay.configur
 
 A configuration category can have a custom icon. Available Icons are provided by Clay UI (see [3])
 
-Because of the known issue regarding. the section label it is recommened to use the existing sections so far. The following can be used:
+Because of the known issue regarding the section label, it is recommened to use the existing sections so far. The following can be used:
 
 * content
 * plattform
@@ -39,7 +39,7 @@ Because of the known issue regarding. the section label it is recommened to use 
 (extracted from https://github.com/liferay/liferay-portal/blob/master/modules/apps/configuration-admin/configuration-admin-web/src/main/resources/content/Language.properties)
 
 
-## Configurations Scopes
+## Configuration Scopes
 
 The following scopes are available.
 
