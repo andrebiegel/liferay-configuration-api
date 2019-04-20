@@ -11,8 +11,8 @@ In this repository are four examples located:
 ## Important Notes 
 
 ## Configuration Categories
-Categories itself are created by an osgi service of the class com.liferay.configuration.admin.category.ConfigurationCategory (see [1]).
-The Class is included in the following dependency.
+Categories itself are created by an osgi service of the interface com.liferay.configuration.admin.category.ConfigurationCategory (see [1]).
+The interface is included in the following dependency.
 
 ```
 <dependency>
@@ -27,6 +27,18 @@ Every liferay configuration category is defined within the *com.liferay.configur
 
 A configuration category can have a custom icon. Available Icons are provided by Clay UI (see [3])
 
+Because of the known issue regarding. the section label it is recommened to use the existing sections so far. The following can be used:
+
+* content
+* plattform
+* security
+* other
+* social
+* commerce
+
+(extracted from https://github.com/liferay/liferay-portal/blob/master/modules/apps/configuration-admin/configuration-admin-web/src/main/resources/content/Language.properties)
+
+
 ## Configurations Scopes
 
 The following scopes are available.
@@ -36,7 +48,7 @@ The following scopes are available.
 * Group aka Site 
 * Portlet Instance
 
-It is important to enable metatypes in your bnd file. Otherwise bnd wont recognize the bnd annotations used in liferay.
+It is important to enable metatypes in your bnd file. Otherwise bnd won´t recognize the bnd annotations used in liferay.
 
 ## Known Issues
 
@@ -51,6 +63,10 @@ It is important to enable metatypes in your bnd file. Otherwise bnd wont recogni
 [2]: https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/overriding-a-modules-language-keys  "OVERRIDING A MODULE’S LANGUAGE KEYS"
 
 [3]: https://clayui.com/docs/components/icons.html  "Clay UI Icons"
+
+[4]: https://github.com/liferay/liferay-portal/blob/master/modules/apps/configuration-admin/configuration-admin-api/src/main/java/com/liferay/configuration/admin/category/ConfigurationCategory.java  "ConfigurationCategory"
+
+
 
 
 
