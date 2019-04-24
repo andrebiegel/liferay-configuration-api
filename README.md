@@ -1,12 +1,13 @@
 # Configuration API in Liferay DXP
 This repository explores the functionality liferay dxp provides with the new configuration api. It builds upon the osgi configuration admin. Furthermore it allows scoping of configuration and the integration within the system settings ui with configuration categories.
 
-In this repository are four examples located:
+In this repository are five examples located:
 * [Pure OSGI Example](/osgi-core-annotation/README.md)
 * [System scoped configuration with osgi service](/liferay-scoped-system/README.md)
 * [Company scoped configuration with osgi service](/liferay-scoped-company/README.md)
 * [Group scoped configuration with osgi service](/liferay-scoped-group/README.md)
 * [Portlet instance scoped configuration with a Liferay MVC Portlet in combination with a Configuration JSP action ](/liferay-scoped-portlet-instance/README.md)
+Each Examples follows the same principles and just shows an valid variant (eg. in scope).
 
 ## Important Notes 
 
