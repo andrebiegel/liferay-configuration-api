@@ -55,7 +55,9 @@ The following scopes are available.
 * Portlet Instance
 
 It is important to enable metatypes in your bnd file. Otherwise bnd won´t recognize the bnd annotations used in liferay.
-
+```
+-metatype: *
+```
 ## Known Issues
 
 * Language Property Issue: with the the group-scoped example the category section labels fails, but the category labels is resolved. When deploying the company scoped version even the category label fails. When exluding the the configuration category and deploying it separately, it is like the group scoped example .. Strange Things  , the topic is  also in the forums https://community.liferay.com/de/forums/-/message_boards/message/113234099
