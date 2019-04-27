@@ -62,7 +62,7 @@ The following scopes are available.
 * Group aka Site 
 * Portlet Instance
 
-It is important to enable metatypes in your bnd file. Otherwise bnd won´t recognize the bnd annotations used in liferay.
+It is important to enable metatypes in your bnd file. Otherwise bnd won´t recognize the bnd annotations used in liferay. So if you are missing the config the first place to check is the OSGI-INF/metadata directory in the jar file.
 ```
 -metatype: *
 ```
