@@ -26,6 +26,11 @@ The interface is included in the following dependency.
 
 Every liferay configuration category is defined within the *com.liferay.configuration.admin.web* bundle. Therefore any category language property has to be provided by a module language property override(see [2]).
 
+```
+Provide-Capability:\
+liferay.resource.bundle;resource.bundle.aggregate:String="(bundle.symbolic.name=de.abiegel.configuration.category.foo),(bundle.symbolic.name=com.liferay.configuration.admin.web)";bundle.symbolic.name=com.liferay.configuration.admin.web;resource.bundle.base.name="content.Language";service.ranking:Long="2";\
+```
+
 A configuration category can have a custom icon. Available Icons are provided by Clay UI (see [3])
 
 Because of the known issue regarding the section label, it is recommened to use the existing sections so far. The following can be used:
