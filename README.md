@@ -10,11 +10,12 @@ In this repository are five examples located:
 Each Examples follows the same principles and just shows an valid variant (eg. in scope).
 
 ## Localization 
-To localize the  Configuration itself, the following BND-file entry has be existent in addtion to an resource-bundle located in src/main/resources
+To localize the  Configuration itself, the following BND-file entry has to be existent, in addtion to a resource-bundle located in src/main/resources
 
 ```
 -plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
 ```
+The plugins adds a capability in the manifest.
 
 ## Configuration Categories
 Categories itself are created by an osgi service of the interface com.liferay.configuration.admin.category.ConfigurationCategory (see [1]).
