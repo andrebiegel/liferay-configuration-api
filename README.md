@@ -66,6 +66,17 @@ It is important to enable metatypes in your bnd file. Otherwise bnd won´t recog
 ```
 -metatype: *
 ```
+```Xml
+<?xml version='1.0' encoding='UTF-8'?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="content/Language">
+  <OCD name="foo-default-name" id="de.abiegel.configuration.osgi.example.ConfiguredComponentConfig" description="foo-default-name-desc">
+    <AD name="foo-default-name-entry" id="defaultName" cardinality="0" required="false" default="FOO" type="String" description="foo-default-name-entry-desc"/>
+  </OCD>
+  <Designate pid="de.abiegel.configuration.osgi.example.ConfiguredComponentConfig">
+    <Object ocdref="de.abiegel.configuration.osgi.example.ConfiguredComponentConfig"/>
+  </Designate>
+</metatype:MetaData>
+```
 ## Known Issues
 
 * Language Property Issue: with the the group-scoped example the category section labels fails, but the category labels is resolved. When deploying the company scoped version even the category label fails. When exluding the the configuration category and deploying it separately, it is like the group scoped example .. Strange Things  , the topic is  also in the forums https://community.liferay.com/de/forums/-/message_boards/message/113234099
