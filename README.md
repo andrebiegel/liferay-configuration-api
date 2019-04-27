@@ -9,7 +9,12 @@ In this repository are five examples located:
 * [Portlet instance scoped configuration with a Liferay MVC Portlet in combination with a Configuration JSP action ](/liferay-scoped-portlet-instance/README.md)
 Each Examples follows the same principles and just shows an valid variant (eg. in scope).
 
-## Important Notes 
+## Localization 
+To localize the  Configuration itself, the following BND-file entry has be existent in addtion to an resource-bundle located in src/main/resources
+
+```
+-plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
+```
 
 ## Configuration Categories
 Categories itself are created by an osgi service of the interface com.liferay.configuration.admin.category.ConfigurationCategory (see [1]).
@@ -24,11 +29,11 @@ The interface is included in the following dependency.
 </dependency>
 ```
 
-Every liferay configuration category is defined within the *com.liferay.configuration.admin.web* bundle. Therefore any category language property has to be provided by a module language property override(see [2]).
+Every liferay configuration category is defined within the *com.liferay.configuration.admin.web* bundle. Therefore any category language property has to be provided by a module language property override(see [2]). While playing with the notation, i found out , that the resource bundles can be splitted. In all scoped examples the resource-bundle Language.properties contains properties for the configuration interface. The resource bundle CategoryLanguage carries the category  and section label. 
 
 ```
 Provide-Capability:\
-liferay.resource.bundle;resource.bundle.aggregate:String="(bundle.symbolic.name=de.abiegel.configuration.category.foo),(bundle.symbolic.name=com.liferay.configuration.admin.web)";bundle.symbolic.name=com.liferay.configuration.admin.web;resource.bundle.base.name="content.Language";service.ranking:Long="2";\
+liferay.resource.bundle;resource.bundle.aggregate:String="(bundle.symbolic.name=de.abiegel.configuration.osgi.example),(bundle.symbolic.name=com.liferay.configuration.admin.web)";bundle.symbolic.name=com.liferay.configuration.admin.web;resource.bundle.base.name="content.CategoryLanguage";service.ranking:Long="2";\
 ```
 
 A configuration category can have a custom icon. Available Icons are provided by Clay UI (see [3])
