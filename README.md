@@ -76,6 +76,16 @@ It is important to enable metatypes in your bnd file. Otherwise bnd won´t recog
   </Designate>
 </metatype:MetaData>
 ```
+
+## Known Issues
+
+* soa far: category sections are correctly displayed with DXP 7.1 Fixpack 10  
+* Exporting configurations: when exportings configurations , liferay is providing the mediatype as XML and not as config. ..the old way was in xml
+
+## Open Topics
+*  the portlet example contains a ConfigurationPidMapping Implementation. it is unclear what it acually does .. it has been adapted from the liferay blogs portlet (https://community.liferay.com/de/forums/-/message_boards/message/113426189?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false)
+
+
 ## Sources
 
 * https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/categorizing-the-configuration
