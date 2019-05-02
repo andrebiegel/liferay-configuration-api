@@ -11,10 +11,12 @@ Each Examples follows the same principles and just shows an valid variant (eg. i
 
 ## Localization 
 To localize the  Configuration itself, the following BND-file entry has to be existent, in addtion to a resource-bundle located in src/main/resources
+
 ```
 -plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
 ```
 The plugins adds a capability in the manifest.
+
 ```
 liferay.resource.bundle;bundle.symbolic.name="de.abiegel.configuration.osgi.example";resource.bundle.base.name="content.Language"
 ```
@@ -32,16 +34,11 @@ The interface is included in the following dependency.
 </dependency>
 ```
 
-Every liferay configuration category is defined within the *com.liferay.configuration.admin.web* bundle. Therefore any category language property has to be provided by a module language property override(see [2]). While playing with the notation, i found out , that the resource bundles can be splitted. In all scoped examples the resource-bundle Language.properties contains properties for the configuration interface. The resource bundle CategoryLanguage carries the category  and section label. 
+Every liferay configuration category is defined within the *com.liferay.configuration.admin.web* bundle. But any category language property is going to be provided by the resource-bundle the module defines by itself !! The resource bundle Language carries the category and section label. 
 
-```
-Provide-Capability:\
-liferay.resource.bundle;resource.bundle.aggregate:String="(bundle.symbolic.name=de.abiegel.configuration.osgi.example),(bundle.symbolic.name=com.liferay.configuration.admin.web)";bundle.symbolic.name=com.liferay.configuration.admin.web;resource.bundle.base.name="content.CategoryLanguage";service.ranking:Long="2";\
-```
+A configuration category can have a custom icon. Available Icons are provided by Clay UI (see [2])
 
-A configuration category can have a custom icon. Available Icons are provided by Clay UI (see [3])
-
-Because of the known issue regarding the section label, it is recommened to use the existing sections so far. The following can be used:
+The following existing can also be used:
 
 * content
 * plattform
@@ -63,9 +60,11 @@ The following scopes are available.
 * Portlet Instance
 
 It is important to enable metatypes in your bnd file. Otherwise bnd won´t recognize the bnd annotations used in liferay. So if you are missing the config the first place to check is the OSGI-INF/metadata directory in the jar file.
+
 ```
 -metatype: *
 ```
+
 ```Xml
 <?xml version='1.0' encoding='UTF-8'?>
 <metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="content/Language">
@@ -77,20 +76,14 @@ It is important to enable metatypes in your bnd file. Otherwise bnd won´t recog
   </Designate>
 </metatype:MetaData>
 ```
-## Known Issues
+## Sources
 
-* Language Property Issue: with the the group-scoped example the category section labels fails, but the category labels is resolved. When deploying the company scoped version even the category label fails. When exluding the the configuration category and deploying it separately, it is like the group scoped example .. Strange Things  , the topic is  also in the forums https://community.liferay.com/de/forums/-/message_boards/message/113234099
-* Exporting configurations: when exportings configurations , liferay is providing the mediatype as XML and not as config. ..the old way was in xml
-* the confog category Label is not displayed in every variant: The tests have been done with sp 9.. so far the workaroung is to deploy the category separately .. 
-
-## Open Topics
-*  the portlet example contains a ConfigurationPidMapping Implementation. it is unclear what it acually does .. it has been adapted from the liferay blogs portlet (https://community.liferay.com/de/forums/-/message_boards/message/113426189?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false)
+* https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/categorizing-the-configuration
+* https://clayui.com/docs/components/icons.html
 
 [1]: https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/categorizing-the-configuration  "Creating Configuration Categories"
 
-[2]: https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-1/overriding-a-modules-language-keys  "OVERRIDING A MODULE’S LANGUAGE KEYS"
-
-[3]: https://clayui.com/docs/components/icons.html  "Clay UI Icons"
+[2]: https://clayui.com/docs/components/icons.html  "Clay UI Icons"
 
 [4]: https://github.com/liferay/liferay-portal/blob/master/modules/apps/configuration-admin/configuration-admin-api/src/main/java/com/liferay/configuration/admin/category/ConfigurationCategory.java  "ConfigurationCategory"
 
