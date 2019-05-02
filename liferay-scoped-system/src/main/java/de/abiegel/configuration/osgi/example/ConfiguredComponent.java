@@ -14,7 +14,6 @@ import com.liferay.portal.kernel.module.configuration.ConfigurationProvider;
  * @author usiabiegel
  */
 
-//@Designate(ocd = ConfiguredComponentConfig.class)
 @Component(configurationPid = {
 		"de.abiegel.configuration.osgi.example.ConfiguredComponentConfig" }, immediate = true, service = Fooable.class)
 public class ConfiguredComponent implements Fooable {
