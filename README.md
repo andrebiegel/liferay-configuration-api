@@ -84,6 +84,7 @@ It is important to enable metatypes in your bnd file. Otherwise bnd won´t recog
 
 ## Open Topics
 *  the portlet example contains a ConfigurationPidMapping Implementation. it is unclear what it acually does .. it has been adapted from the liferay blogs portlet (https://community.liferay.com/de/forums/-/message_boards/message/113426189?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false)
+* the section categories labels dont not have to be provided by a module override.. but actually the config-admin-web portlet displays them, so i think the way liferay suggests is defining such a override https://community.liferay.com/de/forums/-/message_boards/message/113234099?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false
 
 
 ## Sources
