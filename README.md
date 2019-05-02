@@ -41,7 +41,7 @@ A configuration category can have a custom icon. Available Icons are provided by
 The following existing can also be used:
 
 * content
-* plattform
+* platform
 * security
 * other
 * social
