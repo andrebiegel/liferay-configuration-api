@@ -7,6 +7,3 @@ Bundle-SymbolicName: de.abiegel.configuration.osgi.example
 -plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
 -plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin
 -sources: true
-
-Provide-Capability:\
-liferay.resource.bundle;resource.bundle.aggregate:String="(bundle.symbolic.name=de.abiegel.configuration.osgi.example),(bundle.symbolic.name=com.liferay.configuration.admin.web)";bundle.symbolic.name=com.liferay.configuration.admin.web;resource.bundle.base.name="content.CategoryLanguage";service.ranking:Long="2";\
