@@ -22,7 +22,7 @@ liferay.resource.bundle;bundle.symbolic.name="de.abiegel.configuration.osgi.exam
 ```
 
 ## Configuration Categories
-Categories itself are created by an osgi service of the interface com.liferay.configuration.admin.category.ConfigurationCategory (see [1]).
+Categories itself are created by an osgi service of the interface *com.liferay.configuration.admin.category.ConfigurationCategory* (see [1]).
 The interface is included in the following dependency.
 
 ```
@@ -34,11 +34,11 @@ The interface is included in the following dependency.
 </dependency>
 ```
 
-Every liferay configuration category is defined within the *com.liferay.configuration.admin.web* bundle. But any category language property is going to be provided by the resource-bundle the module defines by itself !! The resource bundle Language carries the category and section label. 
+Every liferay configuration category is defined within the *com.liferay.configuration.admin.web* bundle. But any category language property is going to be provided by the resource-bundle the module defines by itself !! The resource bundle *Language* carries the category and section label. 
 
 A configuration category can have a custom icon. Available Icons are provided by Clay UI (see [2])
 
-The following existing can also be used:
+The following existing ones, can also be used:
 
 * content
 * platform
@@ -59,7 +59,7 @@ The following scopes are available.
 * Group aka Site 
 * Portlet Instance
 
-It is important to enable metatypes in your bnd file. Otherwise bnd won´t recognize the bnd annotations used in liferay. So if you are missing the config the first place to check is the OSGI-INF/metadata directory in the jar file.
+It is important to enable metatypes in your bnd file. Otherwise bnd won´t recognize the bnd annotations used in liferay. So if you are missing the config, the first place to check, is the *OSGI-INF/metadata* directory in the jar file.
 
 ```
 -metatype: *
@@ -79,8 +79,8 @@ It is important to enable metatypes in your bnd file. Otherwise bnd won´t recog
 
 ## Known Issues
 
-* soa far: category sections are correctly displayed with DXP 7.1 Fixpack 10  
-* Exporting configurations: when exportings configurations , liferay is providing the mediatype as XML and not as config. ..the old way was in xml
+* so far: category sections are correctly displayed with DXP 7.1 Fixpack 10  
+* exporting configurations: when exporting configurations, liferay is providing the mediatype as *XML* and not as *config*. ..the old way was in xml
 
 ## Open Topics
 *  the portlet example contains a ConfigurationPidMapping Implementation. it is unclear what it acually does .. it has been adapted from the liferay blogs portlet (https://community.liferay.com/de/forums/-/message_boards/message/113426189?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false)
