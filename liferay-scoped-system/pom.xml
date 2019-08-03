@@ -81,7 +81,7 @@
 					<dependency>
 						<groupId>com.liferay</groupId>
 						<artifactId>com.liferay.ant.bnd</artifactId>
-						<version>3.0.6</version>
+						<version>${com.liferay.ant.bnd.version}</version>
 					</dependency>
 				</dependencies>
 			</plugin>
