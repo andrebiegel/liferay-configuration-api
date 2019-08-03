@@ -1,0 +1,3 @@
+version: "3"
+  liferay: 
+    image: liferay/dxp:7.2.10
