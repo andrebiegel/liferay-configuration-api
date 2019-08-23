@@ -15,4 +15,4 @@ Use PortletDisplay. This is the recommended approach for configurations at the P
 
 ## Know Issues
 
-![Exporting Bug](images/export.PNG "Exporting Bug")
+![Configuration](images/configuration-view.PNG "Configuration")
