@@ -1,6 +1,9 @@
 # Configuration API in Liferay DXP
 This repository explores the functionality liferay dxp provides with the new configuration api. It builds upon the osgi configuration admin. Furthermore it allows scoping of configuration and the integration within the system settings ui with configuration categories.
 
+
+TESTED UPON DXP 7.2 
+
 In this repository are five examples located:
 * [Pure OSGI Example](/osgi-core-annotation/README.md)
 * [System scoped configuration with osgi service](/liferay-scoped-system/README.md)
@@ -80,7 +83,9 @@ It is important to enable metatypes in your bnd file. Otherwise bnd won´t recog
 ## Known Issues
 
 * so far: category sections are correctly displayed with DXP 7.1 Fixpack 10  
-* exporting configurations: when exporting configurations, liferay is providing the mediatype as *XML* and not as *config*. ..the old way was in xml
+* DXP 7.1 FP 10: exporting configurations: when exporting configurations, liferay is providing the mediatype as *XML* and not as *config*. ..the old way was in xml
+* since DXP 7.2 exporting Configuations is only possible with system settings, but these will get loaded as config files, every piece in instance setting does not have this functionality
+* the Scope Portlet Instance : the confiuration is not going to be accessible with the context menue of the portlet itself !!
 
 ## Open Topics
 *  the portlet example contains a ConfigurationPidMapping Implementation. it is unclear what it acually does .. it has been adapted from the liferay blogs portlet (https://community.liferay.com/de/forums/-/message_boards/message/113426189?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false)
