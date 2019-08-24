@@ -7,13 +7,16 @@
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<properties>
+		<!--Build Phase-->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-
+		<!--Compile Phase-->
 		<com.liferay.configuration.admin.api.version>2.0.0</com.liferay.configuration.admin.api.version>
 		<com.liferay.portal.kernel.version>4.4.0</com.liferay.portal.kernel.version>
+
+		<!--Build Phase-->
 		<biz.aQute.bndlib.version>3.5.0</biz.aQute.bndlib.version>
 		<com.liferay.ant.bnd.version>3.0.6</com.liferay.ant.bnd.version>
 	</properties>
