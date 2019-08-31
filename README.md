@@ -39,6 +39,7 @@ The interface is included in the following dependency.
 
 Every liferay configuration category is defined within the *com.liferay.configuration.admin.web* bundle. But any category language property is going to be provided by the resource-bundle the module defines by itself !! The resource bundle *Language* carries the category and section label. 
 
+
 A configuration category can have a custom icon. Available Icons are provided by Clay UI (see [2])
 
 The following existing ones, can also be used:
@@ -52,6 +53,9 @@ The following existing ones, can also be used:
 
 (extracted from https://github.com/liferay/liferay-portal/blob/master/modules/apps/configuration-admin/configuration-admin-web/src/main/resources/content/Language.properties)
 
+
+the language keys for categories and sections must follow a specific format. Prefix each section language key with category-section. and each category language key with category. For example:
+*category-section.content-and-data=Content* and Data *category.dynamic-data-mapping=Dynamic Data Mapping*  (https://portal.liferay.dev/docs/7-2/frameworks/-/knowledge_base/f/categorizing-the-configuration)
 
 ## Configuration Scopes
 
@@ -84,11 +88,11 @@ It is important to enable metatypes in your bnd file. Otherwise bnd won´t recog
 
 * so far: category sections are correctly displayed with DXP 7.1 Fixpack 10  
 * DXP 7.1 FP 10: exporting configurations: when exporting configurations, liferay is providing the mediatype as *XML* and not as *config*. ..the old way was in xml
-* since DXP 7.2 exporting Configuations is only possible with system settings, but these will get loaded as config files, every piece in instance setting does not have this functionality
-* the Scope Portlet Instance : the confiuration is not going to be accessible with the context menue of the portlet itself !!
+* since DXP 7.2 exporting Configurations is only possible with system settings, but these will get loaded as config files, every piece in instance setting does not have this functionality
+* DXP 7.2 The custom category just displays one element .. to see others deactivate the other  bundles!
 
 ## Open Topics
-*  the portlet example contains a ConfigurationPidMapping Implementation. it is unclear what it acually does .. it has been adapted from the liferay blogs portlet (https://community.liferay.com/de/forums/-/message_boards/message/113426189?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false)
+*  the portlet example contains a ConfigurationPidMapping Implementation. it is unclear what it acually does .. it has been adapted from the liferay blogs portlet (https://community.liferay.com/de/forums/-/message_boards/message/113426189?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false) by experimenting .. the class is responsible for connecting the osgi config instance the ui in the portlet scope sampe otherwhise default values will not be visible 
 * the section categories labels dont not have to be provided by a module override.. but actually the config-admin-web portlet displays them, so i think the way liferay suggests is defining such a override https://community.liferay.com/de/forums/-/message_boards/message/113234099?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false
 
 

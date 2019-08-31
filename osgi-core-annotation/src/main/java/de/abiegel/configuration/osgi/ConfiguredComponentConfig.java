@@ -1,4 +1,4 @@
-package de.abiegel.configuration.osgi.example;
+package de.abiegel.configuration.osgi;
 
 import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.AttributeType;

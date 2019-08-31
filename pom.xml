@@ -26,6 +26,7 @@
 		<module>liferay-scoped-system</module>
 		<module>liferay-scoped-company</module>
 		<module>liferay-scoped-group</module>
+		
 		<module>osgi-core-annotation</module>
 		<module>costum-config-category</module>
 	</modules>

@@ -1,12 +1,14 @@
-package de.abiegel.configuration.osgi.example;
+package de.abiegel.configuration.osgi.example.settings.definition;
 
 import org.osgi.service.component.annotations.Component;
+
+import de.abiegel.configuration.osgi.example.ConfiguredComponentConfig;
 
 import com.liferay.portal.kernel.settings.definition.ConfigurationPidMapping;
 
 /**
  * 
- * Seems to connect the osgi configuration with the instance the ConfigurationProviderUtil provides , without that the default value is not going to be displayed
+ * connects the osgi configuration with the instance the internal instance in the setup ui provides , without that the default value is not going to be displayed
  *
  */
 @Component

@@ -4,7 +4,7 @@ import org.osgi.service.component.annotations.Component;
 
 import com.liferay.configuration.admin.category.ConfigurationCategory;
 
-@Component
+//@Component
 public class FooCategory implements ConfigurationCategory {
 
 	@Override
