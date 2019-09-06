@@ -1,10 +1,10 @@
-package de.abiegel.configuration.osgi.example;
+package de.abiegel.configuration.osgi.group;
 
 import org.osgi.service.component.annotations.Component;
 
 import com.liferay.configuration.admin.category.ConfigurationCategory;
 
-@Component
+//@Component
 public class FooCategory implements ConfigurationCategory {
 
 	@Override
@@ -27,12 +27,14 @@ public class FooCategory implements ConfigurationCategory {
 
 		return "third-party";
 	}
-
+//FIXME: please
 	/**
 	 * What is that for ?? 
 	 */
 	@Override
 	public String getBundleSymbolicName() {
-		return "de.abiegel.configuration.osgi.example";
+		return "de.abiegel.configuration.osgi.group";
 	}
+
+	
 }

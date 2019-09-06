@@ -1,6 +1,8 @@
-package de.abiegel.configuration.osgi.example;
+package de.abiegel.configuration.osgi.example.settings.definition;
 
 import org.osgi.service.component.annotations.Component;
+
+import de.abiegel.configuration.osgi.example.ConfiguredComponentConfig;
 
 import com.liferay.portal.kernel.settings.definition.ConfigurationBeanDeclaration;
 

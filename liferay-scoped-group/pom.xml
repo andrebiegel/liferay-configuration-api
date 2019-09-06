@@ -15,13 +15,13 @@
 		<dependency>
 			<groupId>com.liferay</groupId>
 			<artifactId>com.liferay.configuration.admin.api</artifactId>
-			<version>1.0.0</version>
+			<version>${com.liferay.configuration.admin.api.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.liferay.portal</groupId>
 			<artifactId>com.liferay.portal.kernel</artifactId>
-			<version>3.0.0</version>
+			<version>${com.liferay.portal.kernel.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -81,7 +81,7 @@
 					<dependency>
 						<groupId>com.liferay</groupId>
 						<artifactId>com.liferay.ant.bnd</artifactId>
-							<version>3.0.6</version>
+							<version>${com.liferay.ant.bnd.version}</version>
 					</dependency>
 				</dependencies>
 			</plugin>
