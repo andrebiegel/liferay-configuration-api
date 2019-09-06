@@ -1,3 +1,3 @@
-Bundle-Name: de.abiegel.configuration.osgi
-Bundle-SymbolicName: de.abiegel.configuration.osgi
+Bundle-Name: de.abiegel.configuration.osgi.example
+Bundle-SymbolicName: de.abiegel.configuration.osgi.example
 -plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin

@@ -1,5 +1,5 @@
-Bundle-Name: de.abiegel.configuration.osgi.company
-Bundle-SymbolicName: de.abiegel.configuration.osgi.company
+Bundle-Name: de.abiegel.configuration.osgi.example
+Bundle-SymbolicName: de.abiegel.configuration.osgi.example
 -metatype: *
 -plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
 -sources: true
