@@ -38,7 +38,6 @@ import com.liferay.portal.kernel.util.WebKeys;
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
 		"com.liferay.portlet.instanceable=true",
-		"javax.portlet.name=de_abiegel_configuration_osgi_example_OsgiConfiguredPortlet",
 		"javax.portlet.display-name=Portlet Configuration Example",
 		"javax.portlet.init-param.template-path=/osgiconfiguredportlet/",
 		"javax.portlet.supports.mime-type=text/html",

@@ -1,5 +1,5 @@
-Bundle-Name: de.abiegel.configuration.osgi.portlet.instance
-Bundle-SymbolicName: de.abiegel.configuration.osgi.portlet.instance
+Bundle-Name: de.abiegel.configuration.osgi.example
+Bundle-SymbolicName: de.abiegel.configuration.osgi.example
 -contract: JavaPortlet
 -jsp: *.jsp,*.jspf
 # Without that bnd wont find the annotations 

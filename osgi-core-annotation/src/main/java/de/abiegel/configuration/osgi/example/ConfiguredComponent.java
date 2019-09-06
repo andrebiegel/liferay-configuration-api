@@ -1,4 +1,4 @@
-package de.abiegel.configuration.osgi;
+package de.abiegel.configuration.osgi.example;
 
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
@@ -13,7 +13,7 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
  */
 @Designate(ocd = ConfiguredComponentConfig.class)
 @Component(configurationPid = {
-		"de.abiegel.configuration.osgi.ConfiguredComponentConfig" }, immediate = true, service = Fooable.class)
+		"de.abiegel.configuration.osgi.example.ConfiguredComponentConfig" }, immediate = true, service = Fooable.class)
 public class ConfiguredComponent implements Fooable {
 
 	private static final Log logger = LogFactoryUtil.getLog(ConfiguredComponent.class);

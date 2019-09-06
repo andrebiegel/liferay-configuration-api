@@ -1,4 +1,4 @@
-package de.abiegel.configuration.osgi.group;
+package de.abiegel.configuration.osgi.example;
 
 import org.osgi.service.component.annotations.Component;
 
@@ -14,7 +14,7 @@ public class ConfiguredComponentConfigurationBeanDeclaration implements Configur
 
 	@Override
 	public Class<?> getConfigurationBeanClass() {
-		return GroupConfiguredComponentConfig.class;
+		return ConfiguredComponentConfig.class;
 	}
 
 }

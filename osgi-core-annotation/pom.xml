@@ -16,7 +16,7 @@
 		<dependency>
 			<groupId>com.liferay.portal</groupId>
 			<artifactId>com.liferay.portal.kernel</artifactId>
-			<version>${com.liferay.portal.kernel.version}</version>
+			<version>3.0.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -64,7 +64,7 @@
 					<dependency>
 						<groupId>com.liferay</groupId>
 						<artifactId>com.liferay.ant.bnd</artifactId>
-						<version>${com.liferay.ant.bnd.version}</version>
+						<version>3.0.6</version>
 					</dependency>
 				</dependencies>
 			</plugin>
