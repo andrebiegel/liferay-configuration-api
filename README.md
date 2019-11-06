@@ -91,7 +91,7 @@ The ConfigurationFieldOptionsProvider allows you to populate select lists with c
 The following property in an configuration interface in combination with the imoplementation in tne company sammple will end up in the following ui 
 
 
-![Dynamic Select List](liferay-scoped-company/images/dynamic.PNG "Dynamic Select List")
+![Dynamic Select List](/liferay-scoped-company/images/dynamic.PNG "Dynamic Select List")
 
 ```java
 @AD(deflt = "enabled-with-warning", name = "foo-default-name-entry-list",description = "foo-default-name-entry-list-desc", optionLabels = { "enabled", "enabled-with-warning",
