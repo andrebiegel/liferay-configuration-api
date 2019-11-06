@@ -4,4 +4,4 @@
 
 ![Group Scoped Example](images/fooableThings.PNG "Group Scoped Example")
 
-![Dynamic Select List](images/dynamic.PNG "Dynamic Select List")
+![Dynamic Select List](images/dynamic.png "Dynamic Select List")
