@@ -4,8 +4,9 @@ This repository explores the functionality liferay dxp provides with the new con
 
 TESTED UPON DXP 7.2 SP1
 
-In this repository are five examples located:
+In this repository are the following examples located:
 * [Pure OSGI Example](/osgi-core-annotation/README.md)
+* [Pure OSGI Example with variable substition of system properties and environment variables](/osgi-core-variable-substitution/README.md)
 * [System scoped configuration with osgi service](/liferay-scoped-system/README.md)
 * [Company scoped configuration with osgi service](/liferay-scoped-company/README.md)
 * [Group scoped configuration with osgi service](/liferay-scoped-group/README.md)
@@ -83,7 +84,7 @@ It is important to enable metatypes in your bnd file. Otherwise bnd won´t recog
   </Designate>
 </metatype:MetaData>
 ```
-## Dynamic Configuraltion Select Lists
+## Dynamic Configuration Select Lists
 
 The ConfigurationFieldOptionsProvider allows you to populate select lists with configuration options defined by your custom logic.
 
