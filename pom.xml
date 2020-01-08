@@ -28,6 +28,7 @@
 		<module>liferay-scoped-group</module>
 		
 		<module>osgi-core-annotation</module>
+		<module>osgi-core-variable-substitution</module>
 		<module>costum-config-category</module>
 	</modules>
 		<build>
