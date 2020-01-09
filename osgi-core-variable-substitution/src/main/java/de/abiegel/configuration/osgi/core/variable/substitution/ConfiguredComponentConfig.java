@@ -12,7 +12,7 @@ public @interface ConfiguredComponentConfig {
 	String defaultEnvVar() default "Foo";
 
 	
-	@AttributeDefinition(name = "foo-default-system-entry", required = true, type = AttributeType.STRING, description = "foo-default-name-entry-desc", )
+	@AttributeDefinition(name = "foo-default-system-entry", required = true, type = AttributeType.STRING, description = "foo-default-name-entry-desc" )
 	String defaultSystemPropVar() default "Foo";
 
 }

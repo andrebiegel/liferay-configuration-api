@@ -1,6 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.abiegel.configuration.osgi</groupId>
 	<artifactId>de.abiegel.configuration.osgi.example</artifactId>
@@ -26,12 +25,28 @@
 		<module>liferay-scoped-system</module>
 		<module>liferay-scoped-company</module>
 		<module>liferay-scoped-group</module>
-		
 		<module>osgi-core-annotation</module>
 		<module>osgi-core-variable-substitution</module>
 		<module>costum-config-category</module>
 	</modules>
-		<build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.liferay.portal</groupId>
+				<artifactId>release.dxp.bom</artifactId>
+				<version>7.2.10.1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.liferay/com.liferay.portal.configuration.metatype -->
+			<dependency>
+				<groupId>com.liferay</groupId>
+				<artifactId>com.liferay.portal.configuration.metatype</artifactId>
+				<version>2.0.19</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
