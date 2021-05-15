@@ -1,24 +1,27 @@
 # Configuration API in Liferay DXP
-This repository explores the functionality liferay dxp provides with the new configuration api. It builds upon the osgi configuration admin. Furthermore it allows scoping of configuration and the integration within the system settings ui with configuration categories.
 
+This repository explores the functionality liferay dxp provides with the new configuration api. It builds upon the osgi configuration admin. Furthermore it allows scoping of configuration and the integration within the system settings ui with configuration categories.
 
 TESTED UPON DXP 7.2 SP1
 
 In this repository are the following examples located:
+
 * [Pure OSGI Example](/osgi-core-annotation/README.md)
 * [Pure OSGI Example with variable substition of system properties and environment variables](/osgi-core-variable-substitution/README.md)
 * [System scoped configuration with osgi service](/liferay-scoped-system/README.md)
 * [Company scoped configuration with osgi service](/liferay-scoped-company/README.md)
 * [Group scoped configuration with osgi service](/liferay-scoped-group/README.md)
-* [Portlet instance scoped configuration with a Liferay MVC Portlet in combination with a Configuration JSP action ](/liferay-scoped-portlet-instance/README.md)
+* [Portlet instance scoped configuration with a Liferay MVC Portlet in combination with a Configuration JSP action](/liferay-scoped-portlet-instance/README.md)
 Each Examples follows the same principles and just shows an valid variant (eg. in scope).
 
-## Localization 
+## Localization
+
 To localize the  Configuration itself, the following BND-file entry has to be existent, in addtion to a resource-bundle located in src/main/resources
 
 ```
 -plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
 ```
+
 The plugins adds the following capability in the manifest fiel of your bundle.
 
 ```
@@ -26,6 +29,7 @@ liferay.resource.bundle;bundle.symbolic.name="de.abiegel.configuration.osgi.exam
 ```
 
 ## Configuration Categories
+
 Categories itself are created by an osgi service of the interface *com.liferay.configuration.admin.category.ConfigurationCategory* (see [1]).
 The interface is included in the following dependency.
 
@@ -38,10 +42,7 @@ The interface is included in the following dependency.
 </dependency>
 ```
 
-Every liferay configuration category is defined within the *com.liferay.configuration.admin.web* bundle. But any category language property is going to be provided by the resource-bundle the module defines by itself !! The resource bundle *Language* carries the category and section label. 
-
-
-A configuration category can have a custom icon. Available Icons are provided by Clay UI (see [2])
+Every liferay configuration category is defined within the *com.liferay.configuration.admin.web* bundle. But any category language property is going to be provided by the resource-bundle the module defines by itself !! The resource bundle *Language* carries the category and section label. A configuration category can have a custom icon. Available Icons are provided by Clay UI (see [2])
 
 The following existing ones, can also be used:
 
@@ -52,11 +53,10 @@ The following existing ones, can also be used:
 * social
 * commerce
 
-(extracted from https://github.com/liferay/liferay-portal/blob/master/modules/apps/configuration-admin/configuration-admin-web/src/main/resources/content/Language.properties)
-
+(extracted from <https://github.com/liferay/liferay-portal/blob/master/modules/apps/configuration-admin/configuration-admin-web/src/main/resources/content/Language.properties)>
 
 the language keys for categories and sections must follow a specific format. Prefix each section language key with category-section. and each category language key with category. For example:
-*category-section.content-and-data=Content* and Data *category.dynamic-data-mapping=Dynamic Data Mapping*  (https://portal.liferay.dev/docs/7-2/frameworks/-/knowledge_base/f/categorizing-the-configuration)
+*category-section.content-and-data=Content* and Data *category.dynamic-data-mapping=Dynamic Data Mapping*  ( see <https://portal.liferay.dev/docs/7-2/frameworks/-/knowledge_base/f/categorizing-the-configuration)>
 
 ## Configuration Scopes
 
@@ -64,7 +64,7 @@ The following scopes are available.
 
 * System (default)
 * company
-* Group aka Site 
+* Group aka Site
 * Portlet Instance
 
 It is important to enable metatypes in your bnd file. Otherwise bnd won´t recognize the bnd annotations used in liferay. So if you are missing the config, the first place to check, is the *OSGI-INF/metadata* directory in the jar file.
@@ -84,13 +84,12 @@ It is important to enable metatypes in your bnd file. Otherwise bnd won´t recog
   </Designate>
 </metatype:MetaData>
 ```
+
 ## Dynamic Configuration Select Lists
 
 The ConfigurationFieldOptionsProvider allows you to populate select lists with configuration options defined by your custom logic.
 
-
 The following property in an configuration interface in combination with the imoplementation in tne company sammple will end up in the following ui 
-
 
 ![Dynamic Select List](/liferay-scoped-company/images/dynamic.png "Dynamic Select List")
 
@@ -112,7 +111,20 @@ public class MyConfigurationFieldOptionsProvider implements ConfigurationFieldOp
 }
 ```
 
-(https://portal.liferay.dev/docs/7-2/frameworks/-/knowledge_base/f/dynamically-populating-select-list-fields-in-the-configuration-ui)
+(<https://portal.liferay.dev/docs/7-2/frameworks/-/knowledge_base/f/dynamically-populating-select-list-fields-in-the-configuration-ui)>
+
+## Using Liferays Configurator Extender
+
+Liferay has an BundleTracker with listen the following BND-Header:
+
+```
+Liferay-Configuration-Path: /config
+```
+
+It imports configurations located inside that directory into the osgi runtime by using the configuration-admin-service itself.
+
+(see <https://github.com/liferay/liferay-portal/blob/master/modules/apps/portal-configuration/portal-configuration-extender/src/main/java/com/liferay/portal/configuration/extender/internal/ConfiguratorExtender.java)>
+
 ## Known Issues
 
 * so far: category sections are correctly displayed with DXP 7.1 Fixpack 10  
@@ -122,9 +134,9 @@ public class MyConfigurationFieldOptionsProvider implements ConfigurationFieldOp
 + dynamic lists wont run in dxp 7.2 ga 1, the samples run in sp 1
 
 ## Open Topics
-*  the portlet example contains a ConfigurationPidMapping Implementation. it is unclear what it acually does .. it has been adapted from the liferay blogs portlet (https://community.liferay.com/de/forums/-/message_boards/message/113426189?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false) by experimenting .. the class is responsible for connecting the osgi config instance the ui in the portlet scope sampe otherwhise default values will not be visible 
-* the section categories labels dont not have to be provided by a module override.. but actually the config-admin-web portlet displays them, so i think the way liferay suggests is defining such a override https://community.liferay.com/de/forums/-/message_boards/message/113234099?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false
 
+* the portlet example contains a ConfigurationPidMapping Implementation. it is unclear what it acually does .. it has been adapted from the liferay blogs portlet (https://community.liferay.com/de/forums/-/message_boards/message/113426189?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false) by experimenting .. the class is responsible for connecting the osgi config instance the ui in the portlet scope sampe otherwhise default values will not be visible 
+* the section categories labels dont not have to be provided by a module override.. but actually the config-admin-web portlet displays them, so i think the way liferay suggests is defining such a override https://community.liferay.com/de/forums/-/message_boards/message/113234099?_com_liferay_message_boards_web_portlet_MBPortlet_showBreadcrumb=false
 
 ## Sources
 
@@ -136,8 +148,3 @@ public class MyConfigurationFieldOptionsProvider implements ConfigurationFieldOp
 [2]: https://clayui.com/docs/components/icons.html  "Clay UI Icons"
 
 [4]: https://github.com/liferay/liferay-portal/blob/master/modules/apps/configuration-admin/configuration-admin-api/src/main/java/com/liferay/configuration/admin/category/ConfigurationCategory.java  "ConfigurationCategory"
-
-
-
-
-
