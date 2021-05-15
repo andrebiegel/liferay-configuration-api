@@ -1,3 +1,4 @@
 Bundle-Name: de.abiegel.configuration.osgi
 Bundle-SymbolicName: de.abiegel.configuration.osgi.core.variable.substitution
 -plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
+Liferay-Configuration-Path: /config
