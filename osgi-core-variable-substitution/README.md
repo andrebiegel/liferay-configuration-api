@@ -1,5 +1,7 @@
 # OSGI Configuration example with variable substitution
 
+NOT RUNNING IN LIFERAY DXP 7.3
+
 The example consists of an Java annotation annotated with pure osgi metadata. 
 In Liferay DXP these components will be useable in:
 _Control Panel > System Settings_ 
