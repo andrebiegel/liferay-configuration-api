@@ -5,7 +5,7 @@ This repository explores the functionality liferay dxp provides with the new con
 TESTED UPON DXP 7.3.10-dxp-1
 
 In this repository are the following examples located:
-
+* [Configuration Form Renderer Sample](/configuration-form-renderer/README.md)
 * [Pure OSGI Example](/osgi-core-annotation/README.md)
 * [Pure OSGI Example with variable substition of system properties and environment variables](/osgi-core-variable-substitution/README.md)
 * [System scoped configuration with osgi service](/liferay-scoped-system/README.md)
