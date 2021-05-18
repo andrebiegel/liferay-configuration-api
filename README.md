@@ -2,7 +2,7 @@
 
 This repository explores the functionality liferay dxp provides with the new configuration api. It builds upon the osgi configuration admin. Furthermore it allows scoping of configuration and the integration within the system settings ui with configuration categories.
 
-TESTED UPON DXP 7.2 SP1
+TESTED UPON DXP 7.3.10-dxp-1
 
 In this repository are the following examples located:
 

@@ -1,7 +1,7 @@
 version: '3'
 services:
     liferay: 
-      #image: liferay/portal:7.3.6-ga7
+      #image: liferay/portal:7.3.6-ga7   
       image: liferay/dxp:7.3.10-dxp-1
       environment:
         - LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false

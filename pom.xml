@@ -28,6 +28,7 @@
 		<module>osgi-core-annotation</module>
 		<module>osgi-core-variable-substitution</module>
 		<module>costum-config-category</module>
+		<module>configuration-form-renderer</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>

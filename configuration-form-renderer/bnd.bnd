@@ -1,0 +1,9 @@
+Bundle-Name: de.abiegel.configuration.osgi.liferay.configuration.form.renderer
+Bundle-SymbolicName: de.abiegel.configuration.osgi.liferay.configuration.form.renderer
+-metatype: *
+-plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
+-sources: true
+Export-Package:\
+    de.abiegel.configuration.osgi.liferay.configuration.form.renderer,\
+    de.abiegel.configuration.osgi.liferay.configuration.form.renderer.constants
+Web-ContextPath: /abiegel-configuration-form-renderer
