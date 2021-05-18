@@ -39,12 +39,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			<!-- https://mvnrepository.com/artifact/com.liferay/com.liferay.portal.configuration.metatype -->
-			<dependency>
-				<groupId>com.liferay</groupId>
-				<artifactId>com.liferay.portal.configuration.metatype</artifactId>
-				<version>2.0.20</version>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>

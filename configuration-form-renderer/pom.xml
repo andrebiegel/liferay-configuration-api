@@ -11,11 +11,15 @@
 		<relativePath>../</relativePath>
 		<artifactId>de.abiegel.configuration.osgi.example</artifactId>
 	</parent>
-	<dependencies>			
+	<dependencies>
+		<dependency>
+			<groupId>com.liferay</groupId>
+			<artifactId>com.liferay.portal.configuration.metatype.api</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>com.liferay</groupId>
 			<artifactId>com.liferay.frontend.taglib</artifactId>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.liferay</groupId>
@@ -43,11 +47,6 @@
 			<groupId>biz.aQute.bnd</groupId>
 			<artifactId>biz.aQute.bndlib</artifactId>
 			<version>${biz.aQute.bndlib.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.liferay</groupId>
-			<artifactId>com.liferay.portal.configuration.metatype</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
