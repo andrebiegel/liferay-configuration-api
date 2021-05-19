@@ -7,7 +7,7 @@ import static de.abiegel.configuration.osgi.liferay.configuration.form.renderer.
 import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition;
 
 @ExtendedObjectClassDefinition(
-    
+    generateUI = false,
     category = "vocabulary-configuration",
     scope = ExtendedObjectClassDefinition.Scope.COMPANY
 )
