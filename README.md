@@ -1,3 +1,4 @@
+# WIP NEW VERSION IN MASTER IN PROGRESS
 # Configuration API in Liferay DXP
 
 This repository explores the functionality liferay dxp provides with the new configuration api. It builds upon the osgi configuration admin. Furthermore it allows scoping of configuration and the integration within the system settings ui with configuration categories.
