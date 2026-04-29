@@ -1,1 +1,1 @@
-curl https://www-eu.apache.org/dist//felix/org.apache.felix.webconsole-4.3.16-all.jar --output ./deploy/org.apache.felix.webconsole-4.3.16-all.jar && mvn clean package && mv ./*/target/*.jar deploy/ && docker-compose up
+curl https://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.webconsole/4.3.16/org.apache.felix.webconsole-4.3.16-all.jar --output ./deploy/org.apache.felix.webconsole-4.3.16-all.jar && mvn clean package && mv ./*/target/*.jar deploy/ && docker-compose up
