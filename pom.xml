@@ -8,8 +8,7 @@
 		<!--Build Phase-->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+	    <maven.compiler.release>21</maven.compiler.release>
 		<!--Compile Phase-->
 		<com.liferay.configuration.admin.api.version>2.1.3</com.liferay.configuration.admin.api.version>
 		<com.liferay.portal.kernel.version>4.4.0</com.liferay.portal.kernel.version>
@@ -37,12 +36,19 @@
 			<dependency>
 				<groupId>com.liferay.portal</groupId>
 				<artifactId>release.dxp.bom</artifactId>
-				<version>7.3.10.u34</version>
+				<version>2026.q1.5</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+    <repositories>
+        <repository>
+            <id>liferay-maven</id>
+            <url>https://repository.liferay.com/nexus/content/repositories/public/</url>
+            <name>Liferay Maven Repo</name>
+        </repository>
+    </repositories>
 	<build>
 		<plugins>
 			<plugin>
