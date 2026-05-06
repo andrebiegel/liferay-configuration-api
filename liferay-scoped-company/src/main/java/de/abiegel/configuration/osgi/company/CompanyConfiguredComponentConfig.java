@@ -6,7 +6,7 @@ import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClass
 import aQute.bnd.annotation.metatype.Meta.AD;
 import aQute.bnd.annotation.metatype.Meta.OCD;
 
-@ExtendedObjectClassDefinition(scope = Scope.COMPANY, category = "my-foo")
+@ExtendedObjectClassDefinition(scope = Scope.COMPANY, category = "my-foo-company")
 @OCD(id = "de.abiegel.configuration.osgi.company.CompanyConfiguredComponentConfig", localization = "content/Language", name = "foo-default-name", description = "foo-default-name-desc")
 public @interface CompanyConfiguredComponentConfig {
 
