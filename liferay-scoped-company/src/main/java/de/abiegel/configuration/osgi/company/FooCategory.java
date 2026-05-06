@@ -1,8 +1,9 @@
 package de.abiegel.configuration.osgi.company;
 
 import com.liferay.configuration.admin.category.ConfigurationCategory;
+import org.osgi.service.component.annotations.Component;
 
-//@Component
+@Component
 public class FooCategory implements ConfigurationCategory {
 
 	@Override
