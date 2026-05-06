@@ -1,10 +1,9 @@
 package de.abiegel.configuration.osgi.company;
 
-import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition;
-import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition.Scope;
-
 import aQute.bnd.annotation.metatype.Meta.AD;
 import aQute.bnd.annotation.metatype.Meta.OCD;
+import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition;
+import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition.Scope;
 
 @ExtendedObjectClassDefinition(scope = Scope.COMPANY, category = "my-foo-company")
 @OCD(id = "de.abiegel.configuration.osgi.company.CompanyConfiguredComponentConfig", localization = "content/Language", name = "foo-default-name", description = "foo-default-name-desc")

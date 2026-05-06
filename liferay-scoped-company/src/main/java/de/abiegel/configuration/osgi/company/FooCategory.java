@@ -1,7 +1,5 @@
 package de.abiegel.configuration.osgi.company;
 
-import org.osgi.service.component.annotations.Component;
-
 import com.liferay.configuration.admin.category.ConfigurationCategory;
 
 //@Component
