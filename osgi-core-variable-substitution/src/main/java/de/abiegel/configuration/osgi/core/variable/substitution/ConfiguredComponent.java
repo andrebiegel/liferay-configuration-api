@@ -12,18 +12,18 @@ import org.osgi.service.metatype.annotations.Designate;
 /**
  * @author usiabiegel
  */
-@Designate(ocd = ConfiguredComponentConfig.class)
+@Designate(ocd = ConfiguredComponentConfigVarSubstitution.class)
 @Component(configurationPid = {
-		"de.abiegel.configuration.osgi.core.variable.substitution.ConfiguredComponentConfig" }, immediate = true, service = Fooable.class, configurationPolicy = ConfigurationPolicy.REQUIRE)
+		"de.abiegel.configuration.osgi.core.variable.substitution.ConfiguredComponentConfigVarSubstitution" }, immediate = true, service = Fooable.class, configurationPolicy = ConfigurationPolicy.REQUIRE)
 public class ConfiguredComponent implements Fooable {
 
 	private static final Log logger = LogFactoryUtil.getLog(ConfiguredComponent.class);
 
-	private ConfiguredComponentConfig configuration;
+	private ConfiguredComponentConfigVarSubstitution configuration;
 
 	@Activate
 	@Modified
-	protected void readConfig(final ConfiguredComponentConfig config) {
+	protected void readConfig(final ConfiguredComponentConfigVarSubstitution config) {
 		this.configuration = config;
 	}
 

@@ -6,7 +6,7 @@ import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
 
 @ObjectClassDefinition(name = "foo-default-name", description = "foo-default-name-desc" , localization="content/Language")
-public @interface ConfiguredComponentConfig {
+public @interface ConfiguredComponentConfigVarSubstitution {
 
 	@AttributeDefinition(name = "foo-default-env-entry", required = true, type = AttributeType.STRING, description = "foo-default-name-entry-desc")
 	String defaultEnvVar() default "Foo";
