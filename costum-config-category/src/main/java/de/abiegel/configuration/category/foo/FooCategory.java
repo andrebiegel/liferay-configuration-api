@@ -1,8 +1,7 @@
 package de.abiegel.configuration.category.foo;
 
-import org.osgi.service.component.annotations.Component;
-
 import com.liferay.configuration.admin.category.ConfigurationCategory;
+import org.osgi.service.component.annotations.Component;
 
 @Component
 public class FooCategory implements ConfigurationCategory {
@@ -20,7 +19,7 @@ public class FooCategory implements ConfigurationCategory {
 
 	/**
 	 * choose one of
-	 * @see https://clayui.com/docs/components/icons.html 
+	 * @see https://clayui.com/docs/components/icons.html
 	 */
 	@Override
 	public String getCategoryIcon() {

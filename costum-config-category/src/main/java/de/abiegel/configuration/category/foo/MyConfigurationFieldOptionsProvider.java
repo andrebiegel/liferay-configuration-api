@@ -4,24 +4,26 @@ import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-
 import com.liferay.asset.auto.tagger.text.extractor.TextExtractor;
-import com.liferay.asset.auto.tagger.text.extractor.TextExtractorTracker;
+import com.liferay.asset.auto.tagger.text.extractor.TextExtractorRegistry;
 import com.liferay.asset.kernel.AssetRendererFactoryRegistryUtil;
 import com.liferay.asset.kernel.model.AssetRendererFactory;
 import com.liferay.configuration.admin.definition.ConfigurationFieldOptionsProvider;
 import com.liferay.portal.kernel.security.auth.CompanyThreadLocal;
-
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
+/**
+ *
+ *  @see https://github.com/liferay/liferay-portal/blob/master/modules/apps/asset/asset-auto-tagger-service/src/main/java/com/liferay/asset/auto/tagger/internal/configuration/admin/definition/EnabledClassNamesConfigurationFieldOptionsProvider.java
+ */
 @Component(property = { "configuration.field.name=entryList",
         "configuration.pid=de.abiegel.configuration.osgi.company.CompanyConfiguredComponentConfig"
          }, service = ConfigurationFieldOptionsProvider.class)
 public class MyConfigurationFieldOptionsProvider implements ConfigurationFieldOptionsProvider {
 
     @Reference
-    private TextExtractorTracker _textExtractorTracker;
+    private TextExtractorRegistry  _textExtractorTracker;
 
     @Override
     public List<Option> getOptions() {
