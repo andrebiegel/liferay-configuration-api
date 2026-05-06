@@ -11,18 +11,18 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
 /**
  * @author usiabiegel
  */
-@Designate(ocd = ConfiguredComponentConfig.class)
+@Designate(ocd = ConfiguredComponentConfigCoreOsgi.class)
 @Component(configurationPid = {
-		"de.abiegel.configuration.osgi.ConfiguredComponentConfig" }, immediate = true, service = Fooable.class)
+		"de.abiegel.configuration.osgi.ConfiguredComponentConfigCoreOsgi" }, immediate = true, service = Fooable.class)
 public class ConfiguredComponent implements Fooable {
 
 	private static final Log logger = LogFactoryUtil.getLog(ConfiguredComponent.class);
 
-	private ConfiguredComponentConfig configuration;
+	private ConfiguredComponentConfigCoreOsgi configuration;
 
 	@Activate
 	@Modified
-	protected void readConfig(ConfiguredComponentConfig config) {
+	protected void readConfig(ConfiguredComponentConfigCoreOsgi config) {
 		this.configuration = config;
 	}
 
