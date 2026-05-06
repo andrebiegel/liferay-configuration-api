@@ -1,13 +1,12 @@
 package de.abiegel.configuration.osgi.group;
 
+import aQute.bnd.annotation.metatype.Meta.AD;
+import aQute.bnd.annotation.metatype.Meta.OCD;
 import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition;
 import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition.Scope;
 
-import aQute.bnd.annotation.metatype.Meta.AD;
-import aQute.bnd.annotation.metatype.Meta.OCD;
 
-
-@ExtendedObjectClassDefinition(scope = Scope.GROUP, category = "my-foo")
+@ExtendedObjectClassDefinition(scope = Scope.GROUP, category = "my-foo-group")
 @OCD( id = "de.abiegel.configuration.osgi.group.GroupConfiguredComponentConfig", localization = "content/Language", name = "foo-default-name", description= "foo-default-name-desc")
 public @interface GroupConfiguredComponentConfig {
 

@@ -1,7 +1,5 @@
 package de.abiegel.configuration.osgi.group;
 
-import org.osgi.service.component.annotations.Component;
-
 import com.liferay.configuration.admin.category.ConfigurationCategory;
 
 //@Component
@@ -10,17 +8,17 @@ public class FooCategory implements ConfigurationCategory {
 	@Override
 	public String getCategoryKey() {
 
-		return "my-foo";
+		return "my-foo-group";
 	}
 
 	@Override
 	public String getCategorySection() {
-		return "my-foo-title";
+		return "my-foo-group-title";
 	}
 
 	/**
 	 * choose one of
-	 * @see https://clayui.com/docs/components/icons.html 
+	 * @see https://clayui.com/docs/components/icons.html
 	 */
 	@Override
 	public String getCategoryIcon() {
@@ -29,7 +27,7 @@ public class FooCategory implements ConfigurationCategory {
 	}
 //FIXME: please
 	/**
-	 * What is that for ?? 
+	 * What is that for ??
 	 */
 	@Override
 	public String getBundleSymbolicName() {
