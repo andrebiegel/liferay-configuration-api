@@ -16,21 +16,18 @@
 package de.abiegel.configuration.osgi.example;
 
 import java.io.IOException;
-
-import javax.portlet.Portlet;
-import javax.portlet.PortletException;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.ConfigurationPolicy;
-
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.module.configuration.ConfigurationException;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
 import com.liferay.portal.kernel.util.WebKeys;
+import jakarta.portlet.Portlet;
+import jakarta.portlet.PortletException;
+import jakarta.portlet.RenderRequest;
+import jakarta.portlet.RenderResponse;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.ConfigurationPolicy;
 
 @Component(
 	immediate = true, configurationPid = {
@@ -38,14 +35,14 @@ import com.liferay.portal.kernel.util.WebKeys;
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
 		"com.liferay.portlet.instanceable=true",
-		"javax.portlet.name=de_abiegel_configuration_osgi_example_OsgiConfiguredPortlet",
-		"javax.portlet.display-name=Portlet Configuration Example",
-		"javax.portlet.init-param.template-path=/osgiconfiguredportlet/",
-		"javax.portlet.supports.mime-type=text/html",
-		"javax.portlet.resource-bundle=content.Language",
-		"javax.portlet.security-role-ref=power-user,user",
-		"javax.portlet.init-param.config-template=/osgiconfiguredportlet/configuration.jsp",
-		"javax.portlet.init-param.view-template=/osgiconfiguredportlet/view.jsp"
+		"jakarta.portlet.name=de_abiegel_configuration_osgi_example_OsgiConfiguredPortlet",
+		"jakarta.portlet.display-name=Portlet Configuration Example",
+		"jakarta.portlet.init-param.template-path=/osgiconfiguredportlet/",
+		"jakarta.portlet.supports.mime-type=text/html",
+		"jakarta.portlet.resource-bundle=content.Language",
+		"jakarta.portlet.security-role-ref=power-user,user",
+		"jakarta.portlet.init-param.config-template=/osgiconfiguredportlet/configuration.jsp",
+		"jakarta.portlet.init-param.view-template=/osgiconfiguredportlet/view.jsp"
 	},
 	service = Portlet.class
 )

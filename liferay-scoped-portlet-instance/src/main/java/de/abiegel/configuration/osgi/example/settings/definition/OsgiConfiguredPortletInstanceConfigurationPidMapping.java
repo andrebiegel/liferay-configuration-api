@@ -1,13 +1,11 @@
 package de.abiegel.configuration.osgi.example.settings.definition;
 
+import com.liferay.portal.kernel.settings.definition.ConfigurationPidMapping;
+import de.abiegel.configuration.osgi.example.ConfiguredComponentConfig;
 import org.osgi.service.component.annotations.Component;
 
-import de.abiegel.configuration.osgi.example.ConfiguredComponentConfig;
-
-import com.liferay.portal.kernel.settings.definition.ConfigurationPidMapping;
-
 /**
- * 
+ *
  * connects the osgi configuration with the instance the internal instance in the setup ui provides , without that the default value is not going to be displayed
  *
  */

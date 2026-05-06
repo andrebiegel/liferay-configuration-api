@@ -27,7 +27,6 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 <%@page import="com.liferay.portal.kernel.settings.ParameterMapSettingsLocator" %>
 <%@page import="com.liferay.portal.kernel.settings.PortletInstanceSettingsLocator" %>
 <%@page import="de.abiegel.configuration.osgi.example.ConfiguredComponentConfig" %>
-<%@page import="com.liferay.portal.kernel.util.GetterUtil" %>
 <portlet:defineObjects />
 
 <liferay-theme:defineObjects />

@@ -1,13 +1,12 @@
 package de.abiegel.configuration.osgi.example;
 
+import aQute.bnd.annotation.metatype.Meta.AD;
+import aQute.bnd.annotation.metatype.Meta.OCD;
 import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition;
 import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition.Scope;
 
-import aQute.bnd.annotation.metatype.Meta.AD;
-import aQute.bnd.annotation.metatype.Meta.OCD;
 
-
-@ExtendedObjectClassDefinition( scope = Scope.PORTLET_INSTANCE, category = "my-foo")
+@ExtendedObjectClassDefinition( scope = Scope.PORTLET_INSTANCE, category = "my-foo-portlet")
 @OCD( id = "de.abiegel.configuration.osgi.example.ConfiguredComponentConfig", localization = "content/Language", name = "foo-default-name", description= "foo-default-name-desc")
 public @interface ConfiguredComponentConfig {
 
