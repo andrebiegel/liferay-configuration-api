@@ -5,14 +5,14 @@ import org.osgi.service.metatype.annotations.AttributeType;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 
 
-@ObjectClassDefinition(name = "foo-default-name", description = "foo-default-name-desc" , localization="content/Language")
+@ObjectClassDefinition(name = "foo-default-name-var-sub", description = "foo-default-name-var-sub-desc" , localization="content/Language")
 public @interface ConfiguredComponentConfigVarSubstitution {
 
-	@AttributeDefinition(name = "foo-default-env-entry", required = true, type = AttributeType.STRING, description = "foo-default-name-entry-desc")
-	String defaultEnvVar() default "Foo";
+	@AttributeDefinition(name = "foo-default-var-sub-env-entry", required = true, type = AttributeType.STRING, description = "foo-default-var-sub-name-entry-desc")
+	String defaultEnvVar() default "$[env:PATH]";
 
 	
-	@AttributeDefinition(name = "foo-default-system-entry", required = true, type = AttributeType.STRING, description = "foo-default-name-entry-desc" )
-	String defaultSystemPropVar() default "Foo";
+	@AttributeDefinition(name = "foo-default-var-sub-system-entry", required = true, type = AttributeType.STRING, description = "foo-default-var-sub-name-entry-desc" )
+	String defaultSystemPropVar() default "$[os.name]";
 
 }
