@@ -1,8 +1,7 @@
 package de.abiegel.configuration.osgi.liferay.ddm.form;
 
-import org.osgi.service.component.annotations.Component;
-
 import com.liferay.configuration.admin.category.ConfigurationCategory;
+import org.osgi.service.component.annotations.Component;
 
 @Component
 public class DDMFormCategory implements ConfigurationCategory {
@@ -10,7 +9,7 @@ public class DDMFormCategory implements ConfigurationCategory {
 	@Override
 	public String getCategoryKey() {
 
-		return "ddm-form";
+		return "ddm-form-sample";
 	}
 
 	@Override
@@ -20,19 +19,11 @@ public class DDMFormCategory implements ConfigurationCategory {
 
 	/**
 	 * choose one of
-	 * @see https://clayui.com/docs/components/icons.html 
+	 * @see https://clayui.com/docs/components/icons.html
 	 */
 	@Override
 	public String getCategoryIcon() {
 
 		return "third-party";
-	}
-
-	/**
-	 * What is that for ?? 
-	 */
-	@Override
-	public String getBundleSymbolicName() {
-		return "de.abiegel.configuration.osgi.liferay.ddm.form";
 	}
 }

@@ -12,7 +12,13 @@
 		<artifactId>de.abiegel.configuration.osgi.example</artifactId>
 	</parent>
 	<dependencies>
-		<dependency>
+        <dependency>
+            <groupId>com.liferay.portal</groupId>
+            <artifactId>release.dxp.api</artifactId>
+            <version>2026.q1.7</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
 			<groupId>com.liferay</groupId>
 			<artifactId>com.liferay.configuration.admin.api</artifactId>
 			<scope>provided</scope>
