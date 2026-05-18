@@ -5,3 +5,4 @@ Bundle-Version: 1.0.0
 -plugin.metatype=com.liferay.ant.bnd.metatype.MetatypePlugin
 -plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
 -sources: true
+Liferay-Configuration-Path: /configuration

@@ -17,4 +17,7 @@ public interface SystemConfiguredComponentConfig {
 	@AD(required = false, name = "foo-system-default-liferay-env-entry", deflt = "ENV VAR", description= "foo-system-default-liferay-env-name-entry-desc")
 	String defaultLiferayEnvProp();
 	
+	@AD(required = false, name = "foo-system-default-env-entry", deflt = "ENV VAR", description= "foo-system-default-env-name-entry-desc")
+	String defaultEnvProp();
+	
 }
