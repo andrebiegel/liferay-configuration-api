@@ -1,3 +1,5 @@
+# IS NOT WORKING IN 2026 Q1 1.7
+
 # OSGI Configuration example
 
 The example consists of an Java annotation annotated with pure osgi metadata.

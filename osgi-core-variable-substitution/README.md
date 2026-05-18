@@ -1,6 +1,7 @@
+# IS NOT WORKING IN 2026 Q1 1.7
+
 # OSGI Configuration example with variable substitution
 
-NOT RUNNING IN LIFERAY DXP 7.3
 
 The example consists of an Java annotation annotated with pure osgi metadata. 
 In Liferay DXP these components will be useable in:
@@ -17,9 +18,16 @@ The sample demonstrates how to use environment & system properties in config fil
  
 ```
 defaultEnvVar=${env:PATH}
+defaultEnvVar=$[env:PATH]
 defaultSystemPropVar=${os.name}
 ```
+BY THE WAY: The liferay documentation says that the interpolation for the environment properties should now be working like that:
+see [Liferay Learn Link]( "https://learn.liferay.com/w/dxp/security-and-administration/administration/configuring-liferay/configuration-files-and-factories/using-configuration-files#interpolating-environment-variables")
 
+```
+defaultEnvVar=$[env:PATH]
+
+```
 
 ## Sources
 
