@@ -9,10 +9,10 @@ import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 public @interface ConfiguredComponentConfigVarSubstitution {
 
 	@AttributeDefinition(name = "foo-default-var-sub-env-entry", required = true, type = AttributeType.STRING, description = "foo-default-var-sub-name-entry-desc")
-	String defaultEnvVar() default "$[env:PATH]";
+	String defaultEnvVar() default "${env:PATH}";
 
 	
 	@AttributeDefinition(name = "foo-default-var-sub-system-entry", required = true, type = AttributeType.STRING, description = "foo-default-var-sub-name-entry-desc" )
-	String defaultSystemPropVar() default "$[os.name]";
+	String defaultSystemPropVar() default "${os.name}";
 
 }
