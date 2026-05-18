@@ -14,7 +14,7 @@ public class FooCategory implements ConfigurationCategory {
 
 	@Override
 	public String getCategorySection() {
-		return "my-foo-group-title";
+		return "my-foo-title";
 	}
 
 	/**

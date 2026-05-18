@@ -4,6 +4,7 @@ import com.liferay.portal.configuration.module.configuration.ConfigurationProvid
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.module.configuration.ConfigurationException;
+import de.abiegel.configuration.osgi.system.constants.ConfigurationKeys;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Modified;
@@ -14,7 +15,7 @@ import org.osgi.service.component.annotations.Reference;
  */
 
 @Component(configurationPid = {
-		"de.abiegel.configuration.osgi.system.SystemConfiguredComponentConfig" }, immediate = true, service = Fooable.class)
+		ConfigurationKeys.CONFIGURATION_NAME }, immediate = true, service = Fooable.class)
 public class ConfiguredComponent implements Fooable {
 
 	private static final Log logger = LogFactoryUtil.getLog(ConfiguredComponent.class);

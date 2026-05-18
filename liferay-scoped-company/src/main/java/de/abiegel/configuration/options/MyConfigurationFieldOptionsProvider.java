@@ -1,4 +1,4 @@
-package de.abiegel.configuration.category.foo;
+package de.abiegel.configuration.options;
 
 import java.util.List;
 import java.util.Locale;

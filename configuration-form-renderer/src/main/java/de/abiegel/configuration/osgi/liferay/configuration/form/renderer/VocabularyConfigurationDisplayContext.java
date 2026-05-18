@@ -65,6 +65,6 @@ public class VocabularyConfigurationDisplayContext {
      * @return a list with the vocabularies of the global site of the portal
      */
     public List<String[]> getVocabularies() {
-        return vocabularies;
+        return new ArrayList(vocabularies) ;
     }
 }

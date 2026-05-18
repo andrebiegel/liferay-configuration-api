@@ -1,21 +1,21 @@
 package de.abiegel.configuration.osgi.liferay.configuration.form.renderer;
 
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.module.configuration.ConfigurationException;
+import com.liferay.portal.configuration.module.configuration.ConfigurationProvider;
+import de.abiegel.configuration.osgi.liferay.configuration.form.renderer.constants.VocabularyConfigurationKeys;
 import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Modified;
 import org.osgi.service.component.annotations.Reference;
-
-import com.liferay.portal.kernel.log.Log;
-import com.liferay.portal.kernel.log.LogFactoryUtil;
-import com.liferay.portal.kernel.module.configuration.ConfigurationException;
-import com.liferay.portal.kernel.module.configuration.ConfigurationProvider;
 
 /**
  * @author usiabiegel
  */
 
 @Component( configurationPid = {
-		"de.abiegel.configuration.osgi.liferay.configuration.form.renderer.VocabularyConfiguration" }, immediate = true, service = Fooable.class)
+		VocabularyConfigurationKeys.CONFIGURATION_NAME }, immediate = true, service = Fooable.class)
 public class ConfiguredComponent implements Fooable{
 
 	private static final Log logger = LogFactoryUtil.getLog(ConfiguredComponent.class);

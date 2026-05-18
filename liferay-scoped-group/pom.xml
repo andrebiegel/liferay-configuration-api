@@ -14,7 +14,7 @@
         <dependency>
             <groupId>com.liferay.portal</groupId>
             <artifactId>release.dxp.api</artifactId>
-            <version>2026.q1.5</version>
+            <version>2026.q1.7</version>
             <scope>provided</scope>
         </dependency>
 		<dependency>

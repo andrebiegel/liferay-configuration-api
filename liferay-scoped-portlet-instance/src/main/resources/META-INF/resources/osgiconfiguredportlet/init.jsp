@@ -14,28 +14,30 @@
  */
 --%>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
 
 <%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
 
-<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %><%@
-taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %><%@
-taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %><%@
-taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
-<%@taglib uri="http://liferay.com/tld/frontend" prefix="liferay-frontend" %>
-<%@page import="com.liferay.portal.kernel.module.configuration.ConfigurationProviderUtil" %>
+<%@ taglib uri="http://liferay.com/tld/aui" prefix="aui" %>
+<%@ taglib uri="http://liferay.com/tld/portlet" prefix="liferay-portlet" %>
+<%@ taglib uri="http://liferay.com/tld/theme" prefix="liferay-theme" %>
+<%@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
+<%@ taglib uri="http://liferay.com/tld/frontend" prefix="liferay-frontend" %>
+<%@page import="com.liferay.portal.configuration.module.configuration.ConfigurationProviderUtil" %>
 <%@page import="com.liferay.portal.kernel.settings.ParameterMapSettingsLocator" %>
 <%@page import="com.liferay.portal.kernel.settings.PortletInstanceSettingsLocator" %>
 <%@page import="de.abiegel.configuration.osgi.example.ConfiguredComponentConfig" %>
-<portlet:defineObjects />
+<portlet:defineObjects/>
 
-<liferay-theme:defineObjects />
-
+<liferay-theme:defineObjects/>
+<liferay-frontend:defineObjects/>
 <%
-ConfiguredComponentConfig configuration = ConfigurationProviderUtil.getConfiguration(ConfiguredComponentConfig.class, new ParameterMapSettingsLocator(request.getParameterMap(), new PortletInstanceSettingsLocator(themeDisplay.getLayout(), portletDisplay.getPortletResource())));
+    ConfiguredComponentConfig configuration = ConfigurationProviderUtil.getConfiguration(ConfiguredComponentConfig.class,
+            new ParameterMapSettingsLocator(
+                    request.getParameterMap(),
+                    new PortletInstanceSettingsLocator(themeDisplay.getLayout(), themeDisplay.getPortletDisplay().getPortletResource())));
 
-ConfiguredComponentConfig instanceConfiguration =
-portletDisplay.getPortletInstanceConfiguration(
-		ConfiguredComponentConfig.class);
+    ConfiguredComponentConfig instanceConfiguration = (ConfiguredComponentConfig)request.getAttribute(ConfiguredComponentConfig.class.getName());
+
 %>
 

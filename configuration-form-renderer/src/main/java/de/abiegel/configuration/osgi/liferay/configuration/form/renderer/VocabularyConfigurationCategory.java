@@ -7,8 +7,8 @@ import org.osgi.service.component.annotations.Component;
 public class VocabularyConfigurationCategory implements ConfigurationCategory {
 
     private static final String CATEGORY_ICON = "cog";
-    private static final String CATEGORY_KEY = "vocabulary-configuration";
-    private static final String CATEGORY_SECTION = "vocabulary-configuration";
+    private static final String CATEGORY_KEY = "form-renderer-configuration";
+    private static final String CATEGORY_SECTION = "my-foo-title";
 
     /**
      * Gets a string with the name of the icon used in the instance setting's main panel

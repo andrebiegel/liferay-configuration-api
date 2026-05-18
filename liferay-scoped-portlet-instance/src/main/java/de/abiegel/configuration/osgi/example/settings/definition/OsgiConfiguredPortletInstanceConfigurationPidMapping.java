@@ -6,20 +6,21 @@ import org.osgi.service.component.annotations.Component;
 
 /**
  *
- * connects the osgi configuration with the instance the internal instance in the setup ui provides , without that the default value is not going to be displayed
+ * connects the osgi configuration with the instance the internal instance in the setup ui provides , without that the
+ * default value is not going to be displayed
  *
  */
 @Component
 public class OsgiConfiguredPortletInstanceConfigurationPidMapping implements ConfigurationPidMapping {
-
+	
 	@Override
 	public Class<?> getConfigurationBeanClass() {
 		return ConfiguredComponentConfig.class;
 	}
-
+	
 	@Override
 	public String getConfigurationPid() {
 		return "de_abiegel_configuration_osgi_example_OsgiConfiguredPortlet";
 	}
-
+	
 }

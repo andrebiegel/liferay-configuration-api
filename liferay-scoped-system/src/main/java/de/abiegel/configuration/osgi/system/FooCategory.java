@@ -14,7 +14,7 @@ public class FooCategory implements ConfigurationCategory {
 
 	@Override
 	public String getCategorySection() {
-		return "my-foo-system-title";
+		return "my-foo-title";
 	}
 	/**
 	 * choose one of
@@ -22,8 +22,6 @@ public class FooCategory implements ConfigurationCategory {
 	 */
 	@Override
 	public String getCategoryIcon() {
-
 		return "third-party";
 	}
-
 }

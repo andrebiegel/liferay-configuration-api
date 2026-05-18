@@ -1,31 +1,32 @@
 package de.abiegel.configuration.osgi.liferay.configuration.form.renderer;
 
 import static de.abiegel.configuration.osgi.liferay.configuration.form.renderer.constants.VocabularyConfigurationKeys.CONFIGURATION_NAME;
-
-import com.liferay.asset.kernel.model.AssetVocabulary;
-import com.liferay.asset.kernel.service.AssetVocabularyLocalService;
-import com.liferay.configuration.admin.display.ConfigurationFormRenderer;
-import com.liferay.frontend.taglib.servlet.taglib.util.JSPRenderer;
-import com.liferay.portal.kernel.exception.PortalException;
-import com.liferay.portal.kernel.log.Log;
-import com.liferay.portal.kernel.log.LogFactoryUtil;
-import com.liferay.portal.kernel.module.configuration.ConfigurationException;
-import com.liferay.portal.kernel.module.configuration.ConfigurationProvider;
-import com.liferay.portal.kernel.theme.ThemeDisplay;
-import com.liferay.portal.kernel.util.ParamUtil;
-import com.liferay.portal.kernel.util.Validator;
-import com.liferay.portal.kernel.util.WebKeys;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
-
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import com.liferay.asset.kernel.model.AssetVocabulary;
+import com.liferay.asset.kernel.service.AssetVocabularyLocalService;
+import com.liferay.configuration.admin.display.ConfigurationFormRenderer;
+import com.liferay.configuration.admin.display.ConfigurationScreen;
+import com.liferay.frontend.taglib.servlet.taglib.util.JSPRenderer;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.module.configuration.ConfigurationException;
+import com.liferay.portal.configuration.module.configuration.ConfigurationProvider;
+import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.ParamUtil;
+import com.liferay.portal.kernel.util.Validator;
+import com.liferay.portal.kernel.util.WebKeys;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 
 /**
  * ConfigurationFormRenderer to render a custom display for the country configuration
@@ -39,8 +40,7 @@ public class VocabularyConfigurationFormRenderer implements ConfigurationFormRen
     private static final Log log = LogFactoryUtil.getLog(VocabularyConfigurationFormRenderer.class);
     @Reference
     private AssetVocabularyLocalService assetVocabularyLocalService;
-    @Reference
-    private JSPRenderer jspRenderer;
+
     @Reference
     private ConfigurationProvider configurationProvider;
     @Reference(
@@ -115,8 +115,15 @@ public class VocabularyConfigurationFormRenderer implements ConfigurationFormRen
         }
         countryConfigurationDisplayContext.setFieldLabel("vocabulary-label");
         httpServletRequest.setAttribute("countryConfigurationDisplayContext", countryConfigurationDisplayContext);
-        jspRenderer.renderJSP(
-            _servletContext, httpServletRequest, httpServletResponse,
-            "/configuration.jsp");
+		
+		RequestDispatcher requestDispatcher =
+				_servletContext.getRequestDispatcher("/configuration.jsp");
+		
+		try {
+			requestDispatcher.include(httpServletRequest, httpServletResponse);
+		}
+		catch (ServletException e) {
+			throw new IOException("Unable to render /configuration.jsp", e);
+		}
     }
 }

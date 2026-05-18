@@ -17,9 +17,11 @@
 <%@ include file="/osgiconfiguredportlet/init.jsp" %>
 
 <p>
-	<b><liferay-ui:message key="blade_portlet_jsp_JSPPortlet.caption" /></b>
+    <b><liferay-ui:message key="blade_portlet_jsp_JSPPortlet.caption"/></b>
 </p>
 
 
-<p>Config by ConfigurationProviderUtil: Configured Entry Name : <%= configuration.defaultName() %></p>
-<p>Config by portletDisplay: Configured Entry Name : <%= instanceConfiguration.defaultName() %></p>
+<p>Config by ConfigurationProviderUtil: Configured Entry Name : <%= configuration.defaultName() %>
+</p>
+<p>Config by ConfigurationProvider: Configured Entry Name : <%= instanceConfiguration.defaultName() %>
+</p>

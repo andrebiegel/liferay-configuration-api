@@ -12,5 +12,5 @@
     </c:forEach>
 
 </aui:select>
-<div id="putzmeister-warning"><liferay-ui:message key="country-vocabulary-warning" /></div>
+<div id=""><liferay-ui:message key="country-vocabulary-warning" /></div>
 

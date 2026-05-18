@@ -1,0 +1,7 @@
+Bundle-Name: de.abiegel.configuration.osgi.system.var.subst
+Bundle-SymbolicName: de.abiegel.configuration.osgi.system.var.subst
+Bundle-Version: 1.0.0
+-metatype: *
+-plugin.metatype=com.liferay.ant.bnd.metatype.MetatypePlugin
+-plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
+-sources: true

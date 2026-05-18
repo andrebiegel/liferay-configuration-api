@@ -14,7 +14,7 @@ public class FooCategory implements ConfigurationCategory {
 
 	@Override
 	public String getCategorySection() {
-		return "my-foo-company-title";
+		return "my-foo-title";
 	}
 
 	/**
@@ -25,13 +25,5 @@ public class FooCategory implements ConfigurationCategory {
 	public String getCategoryIcon() {
 
 		return "third-party";
-	}
-
-	/**
-	 * What is that for ??
-	 */
-	@Override
-	public String getBundleSymbolicName() {
-		return "de.abiegel.configuration.osgi.company";
 	}
 }
