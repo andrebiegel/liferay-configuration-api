@@ -108,6 +108,13 @@ It is important to enable metatypes in your bnd file. Otherwise bnd won´t recog
 -metatype: *
 ```
 
+
+The following BND-Header is required to enable metatypes in new Liferay versions
+
+```
+-plugin.metatype=com.liferay.ant.bnd.metatype.MetatypePlugin
+```
+
 ```Xml
 <?xml version='1.0' encoding='UTF-8'?>
 <metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.1.0" localization="content/Language">
@@ -150,7 +157,7 @@ public class MyConfigurationFieldOptionsProvider implements ConfigurationFieldOp
 
 ## Using Liferays Configurator Extender
 
-Liferay has an BundleTracker with listen the following BND-Header:
+Liferay has an BundleTracker with listens to the following BND-Header:
 
 ```
 Liferay-Configuration-Path: /config
@@ -158,11 +165,12 @@ Liferay-Configuration-Path: /config
 
 It imports configurations located inside that directory into the osgi runtime by using the configuration-admin-service itself.
 
-(see <https://github.com/liferay/liferay-portal/blob/master/modules/apps/portal-configuration/portal-configuration-extender/src/main/java/com/liferay/portal/configuration/extender/internal/ConfiguratorExtender.java)>
+(see <https://github.com/liferay/liferay-portal/blob/master/modules/apps/portal-configuration/portal-configuration-extender/src/main/java/com/liferay/portal/configuration/extender/internal/ConfiguratorExtender.java)>)
+
+(see <https://github.com/liferay/liferay-portal/blob/master/modules/apps/portal-configuration/portal-configuration-extender-test/src/testIntegration/java/com/liferay/portal/configuration/extender/internal/test/ConfiguratorExtenderTest.java>))
 
 ## Known Issues
 
-* so far: category sections are correctly displayed with DXP 7.1 Fixpack 10  
 * DXP 7.1 FP 10: exporting configurations: when exporting configurations, liferay is providing the mediatype as *XML* and not as *config*. ..the old way was in xml
 * since DXP 7.2 exporting Configurations is only possible with system settings, but these will get loaded as config files, every piece in instance setting does not have this functionality
 * DXP 7.2 The custom category just displays one element .. to see others deactivate the other  bundles!
