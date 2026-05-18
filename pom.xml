@@ -19,16 +19,17 @@
 	</properties>
 
 	<modules>
-		<!--<module>liferay-scoped-portlet-instance</module>-->
+		<module>liferay-scoped-portlet-instance</module>
 		<module>liferay-scoped-system</module>
+        <module>liferay-scoped-system-var-subst</module>
 		<module>liferay-scoped-company</module>
 		<module>liferay-scoped-group</module>
 		<module>osgi-core-annotation</module>
 		<module>osgi-core-variable-substitution</module>
 		<module>costum-config-category</module>
-		<module>configuration-form-renderer</module>
-<!-- 		<module>configuration-screen</module>
-		<module>portal-settings-configuration-screen-contributor</module>-->
+        <module>configuration-form-renderer</module>
+        <module>configuration-screen</module>
+        <!--         <module>portal-settings-configuration-screen-contributor</module>-->
 		<module>ddm-form-definition</module>
 	</modules>
 	<dependencyManagement>
@@ -36,7 +37,7 @@
 			<dependency>
 				<groupId>com.liferay.portal</groupId>
 				<artifactId>release.dxp.bom</artifactId>
-				<version>2026.q1.5</version>
+				<version>2026.q1.7</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

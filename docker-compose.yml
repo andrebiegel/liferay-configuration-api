@@ -1,19 +1,20 @@
-version: '3'
 services:
     liferay:
-      #image: liferay/portal:7.3.6-ga7
-      image: liferay/dxp:2026.q1.5-lts
+      image: liferay/dxp:2026.q1.7-lts
       environment:
-        - LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
-        - LIFERAY_PASSWORDS_PERIOD_DEFAULT_PERIOD_POLICY_PERIOD_CHANGE_PERIOD_REQUIRED=false
-        - LIFERAY_USERS_PERIOD_REMINDER_PERIOD_QUERIES_PERIOD_ENABLED=false
-        - LIFERAY_USERS_PERIOD_REMINDER_PERIOD_QUERIES_PERIOD_REQUIRED=false
-        - LIFERAY_USERS_PERIOD_REMINDER_PERIOD_QUERIES_PERIOD_CUSTOM_PERIOD_QUESTION_PERIOD_ENABLED=false
-        - LIFERAY_SETUP_PERIOD_WIZARD_PERIOD_ENABLED=false
+       - LIFERAY_TERMS_PERIOD_OF_PERIOD_USE_PERIOD_REQUIRED=false
+       - LIFERAY_PASSWORDS_PERIOD_DEFAULT_PERIOD_POLICY_PERIOD_CHANGE_PERIOD_REQUIRED=false
+       - LIFERAY_USERS_PERIOD_REMINDER_PERIOD_QUERIES_PERIOD_ENABLED=false
+       - LIFERAY_USERS_PERIOD_REMINDER_PERIOD_QUERIES_PERIOD_REQUIRED=false
+       - LIFERAY_USERS_PERIOD_REMINDER_PERIOD_QUERIES_PERIOD_CUSTOM_PERIOD_QUESTION_PERIOD_ENABLED=false
+       - LIFERAY_SETUP_PERIOD_WIZARD_PERIOD_ENABLED=false
+       - LIFERAY_AUTH_PERIOD_PUBLIC_PERIOD_PATHS= /asset/get_asset,/asset/get_categories,/document_library/find_file_entry,/document_library/find_folder, /document_library/get_file, /dynamic_data_lists/find_record, /dynamic_data_mapping/render_structure_field, /flags/edit_flag,/iframe/proxy,/image_gallery_display/find_folder, /image_gallery_display/find_image, /layout_reports/get_google_page_speed_data, /layout_reports/get_layout_item_data, /layout_reports/get_layout_reports_data, /layout_reports/get_layout_reports_issues, /login/facebook_connect_oauth, /message_boards/find_category, /message_boards/find_message, /message_boards/find_thread, /message_boards/get_message_attachment, /message_boards/rss,  /portal/comment/edit_discussion, /portal/comment/get_comments, /portal/emoticons, /portal/expire_session, /portal/extend_session, /portal/extend_session_confirm, /portal/json_service, /portal/license,  /portal/logout, /portal/open_id_request, /portal/open_id_response, /portal/portlet_url, /portal/robots, /portal/session_click, /portal/session_tree_js_click, /portal/sitemap, /portal/status, /o/ready
+       - LIFERAY_MY_CUSTOM_ENV_PROPERTY=my_custom_value
       ports:
-        - 8080:8080
+       - 8080:8080
       volumes:
-        - ./deploy:/etc/liferay/mount/deploy
+       - ./deploy:/mnt/liferay/deploy
+       - ./config:/mnt/liferay/files/osgi/configs
 
 
 
