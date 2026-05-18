@@ -1,4 +1,38 @@
 # WIP NEW VERSION IN MASTER IN PROGRESS
+new Links: 
+Breaking Changes
+ConfigurationProvider has been moved 
+
+https://learn.liferay.com/w/dxp/self-hosted-installation-and-upgrades/upgrading-liferay/deprecations-and-breaking-changes-reference/7-4-deprecations-and-breaking-changes/7-4-breaking-changes
+
+
+New Documentation : 
+
+https://learn.liferay.com/w/dxp/development/traditional-java-based-development/core-frameworks/configuration-framework
+
+https://learn.liferay.com/w/dxp/security-and-administration/administration/configuring-liferay/configuration-files-and-factories/using-configuration-files
+
+the localization keys have to be unique! when configurations are in the same category, the keys have to be unique! when having different categories all is working fine 
+
+lferay bnd meta type plugin needed for bnd to recognize the annotations used in liferay.
+-metatype: *
+-plugin.metatype=com.liferay.ant.bnd.metatype.MetatypePlugin
+
+variable substitution in configuration files is working only for sytem properties , not for environment variables
+
+osgi specification configuration is not working anymore. the title displays null, you cant save and var substitution doesnt work anymore
+
+the system properties interpolation only works when providing a config file. otherwise liferay escapes the parentheses {}.
+
+Tested upon 2026.q1.7
+
+# Configuration Hierachy in Liferay DXP
+![Configuration Hierachy in Liferay DXP](images/img.png "Configuration Hierachy in Liferay DXP")
+
+The Image is from Liferay Learn Portal: 
+
+[Liferay Learn Portal Page](https://learn.liferay.com/w/dxp/security-and-administration/administration/configuring-liferay/understanding-configuration-scope) 
+
 # Configuration API in Liferay DXP
 
 This repository explores the functionality liferay dxp provides with the new configuration api. It builds upon the osgi configuration admin. Furthermore it allows scoping of configuration and the integration within the system settings ui with configuration categories.
