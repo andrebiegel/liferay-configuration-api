@@ -1,6 +1,6 @@
-package com.acme.u2g5.web.internal.configuration.admin.display;
+package de.abiegel.configuration.osgi.liferay.config.screen.admin.display;
 
-import com.acme.u2g5.web.internal.configuration.U2G5WebConfiguration;
+import de.abiegel.configuration.osgi.liferay.config.screen.ConfigScreenWebConfiguration;
 
 import com.liferay.configuration.admin.display.ConfigurationScreen;
 import com.liferay.portal.configuration.module.configuration.ConfigurationProvider;
@@ -10,6 +10,7 @@ import com.liferay.portal.kernel.util.ResourceBundleUtil;
 import java.io.IOException;
 
 import java.util.Locale;
+import de.abiegel.configuration.osgi.liferay.config.screen.ConfigScreenWebConfiguration;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletContext;
@@ -20,7 +21,7 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 @Component(service = ConfigurationScreen.class)
-public class U2G5ConfigurationScreen implements ConfigurationScreen {
+public class CustomConfigurationScreen implements ConfigurationScreen {
 
 	@Override
 	public String getCategoryKey() {
@@ -29,14 +30,14 @@ public class U2G5ConfigurationScreen implements ConfigurationScreen {
 
 	@Override
 	public String getKey() {
-		return "u2g5-configuration-name";
+		return "config-screen-configuration-name";
 	}
 
 	@Override
 	public String getName(Locale locale) {
 		return LanguageUtil.get(
-			ResourceBundleUtil.getBundle(locale, U2G5ConfigurationScreen.class),
-			"u2g5-configuration-name");
+			ResourceBundleUtil.getBundle(locale, CustomConfigurationScreen.class),
+			"config-screen-configuration-name");
 	}
 
 	@Override
@@ -52,17 +53,17 @@ public class U2G5ConfigurationScreen implements ConfigurationScreen {
 
 		try {
 			RequestDispatcher requestDispatcher =
-				_servletContext.getRequestDispatcher("/u2g5.jsp");
+				_servletContext.getRequestDispatcher("/view.jsp");
 
 			httpServletRequest.setAttribute(
-				U2G5WebConfiguration.class.getName(),
+					ConfigScreenWebConfiguration.class.getName(),
 				_configurationProvider.getSystemConfiguration(
-					U2G5WebConfiguration.class));
+						ConfigScreenWebConfiguration.class));
 
 			requestDispatcher.include(httpServletRequest, httpServletResponse);
 		}
 		catch (Exception exception) {
-			throw new IOException("Unable to render /u2g5.jsp", exception);
+			throw new IOException("Unable to render /view.jsp", exception);
 		}
 	}
 
@@ -70,7 +71,7 @@ public class U2G5ConfigurationScreen implements ConfigurationScreen {
 	private ConfigurationProvider _configurationProvider;
 
 	@Reference(
-		target = "(osgi.web.symbolicname=com.acme.u2g5.web)", unbind = "-"
+		target = "(osgi.web.symbolicname=de.abiegel.configuration.screen.sample)", unbind = "-"
 	)
 	private ServletContext _servletContext;
 

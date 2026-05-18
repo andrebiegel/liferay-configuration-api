@@ -1,18 +1,21 @@
-package com.acme.u2g5.web.internal.configuration;
+package de.abiegel.configuration.osgi.liferay.config.screen;
 
 import aQute.bnd.annotation.metatype.Meta;
 
 import com.liferay.portal.configuration.metatype.annotations.ExtendedObjectClassDefinition;
 
+/**
+ * generateUI = false has to be set so that liferay will not generate a default ui for that configuration
+ */
 @ExtendedObjectClassDefinition(
-	category = "u2g5", generateUI = false,
+	category = "config-screen", generateUI = false,
 	scope = ExtendedObjectClassDefinition.Scope.SYSTEM
 )
 @Meta.OCD(
-	id = "com.acme.u2g5.web.internal.configuration.U2G5WebConfiguration",
-	localization = "content/Language", name = "u2g5-configuration-name"
+	id = "de.abiegel.configuration.osgi.liferay.config.screen.ConfigScreenWebConfiguration",
+	localization = "content/Language", name = "config-screen-configuration-name"
 )
-public interface U2G5WebConfiguration {
+public interface ConfigScreenWebConfiguration {
 
 	@Meta.AD(deflt = "blue", required = false)
 	public String fontColor();
