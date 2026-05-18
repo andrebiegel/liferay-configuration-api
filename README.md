@@ -22,7 +22,7 @@ variable substitution in configuration files is working only for sytem propertie
 
 osgi specification configuration is not working anymore. the title displays null, you cant save and var substitution doesnt work anymore
 
-the system properties interpolation only works when providing a config file. otherwise liferay escapes the parentheses {}.
+the system properties interpolation only works when providing a config file. otherwise liferay escapes the parentheses {}. The Documented ENV Interpolation is not working.
 
 Tested upon 2026.q1.7
 
