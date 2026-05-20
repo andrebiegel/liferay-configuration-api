@@ -19,7 +19,7 @@ public class FooCategory implements ConfigurationCategory {
 
 	/**
 	 * choose one of
-	 * @see https://clayui.com/docs/components/icons.html
+	 * @see https://www.clayui.com/docs/components/icon
 	 */
 	@Override
 	public String getCategoryIcon() {
