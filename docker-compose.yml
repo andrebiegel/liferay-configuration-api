@@ -13,8 +13,10 @@ services:
       ports:
        - 8080:8080
       volumes:
+       - ./patching:/mnt/liferay/patching
        - ./deploy:/mnt/liferay/deploy
        - ./config:/mnt/liferay/files/osgi/configs
+       - ./configuration:/opt/liferay/osgi/configs
 
 
 

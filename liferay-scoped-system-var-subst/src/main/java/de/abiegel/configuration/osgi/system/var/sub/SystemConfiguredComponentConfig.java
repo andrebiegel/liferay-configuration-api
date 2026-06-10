@@ -20,4 +20,12 @@ public interface SystemConfiguredComponentConfig {
 	@AD(required = false, name = "foo-system-default-env-entry", deflt = "ENV VAR", description= "foo-system-default-env-name-entry-desc")
 	String defaultEnvProp();
 	
+	
+	@AD(required = false, name = "foo-felix-system-default-env-entry", deflt = "os name", description= "foo-felix-system-default-env-name-entry-desc")
+	String apacheFelixSystemProp();
+	
+	
+	@AD(required = false, name = "foo-system-default-secret-entry", deflt = "secret", description= "foo-system-default-secret-name-entry-desc")
+	String defaultSecretProp();
+	
 }
